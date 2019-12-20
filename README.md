@@ -4,14 +4,15 @@
 
 ### In Terminal
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor # Do all fixes
 brew cask install iterm2
 ```
 
 ```
+brew install caskroom/cask/brew-cask
 brew install zsh oh-my-zsh
-brew cask install google-chrome spotify spectacle openconnect dotfiles keystore-explorer
+brew cask install intellij-idea slack google-chrome spotify spectacle keystore-explorer
 brew install tig
 ```
 
@@ -23,7 +24,7 @@ Consider adding these to a separate scripts file
 git config --global push.followTags true
 
 # Clone dotfiles repo to machine
-git clone git@github.com:asjafjell/dotfiles.git ~/$(whoami)/.dotfiles
+git clone git@github.com:asjafjell/dotfiles.git ~/.dotfiles
 
 # Symlink Zsh config file to dotfiles repo
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
