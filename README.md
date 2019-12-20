@@ -11,7 +11,10 @@ brew cask install iterm2
 
 ```
 brew install caskroom/cask/brew-cask
-brew install zsh oh-my-zsh
+
+brew install zsh 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 brew cask install intellij-idea slack google-chrome spotify spectacle keystore-explorer
 brew install tig
 ```
