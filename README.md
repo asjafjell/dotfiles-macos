@@ -1,7 +1,14 @@
 # Dotfiles
 
 ## Install apps
+
+### In Terminal
 ```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+brew cask install iterm2
+```
+- If it fails because of rights, run: `sudo chown -R aas /usr/local/bin/Homebrew`
+
 brew install zsh oh-my-zsh
 brew cask install sublime-text2 spotify spectacle sourcetree openconnect dotfiles keystore-explorer
 brew install tig
