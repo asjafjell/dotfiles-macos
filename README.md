@@ -5,12 +5,13 @@
 ### In Terminal
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+brew doctor # Do all fixes
 brew cask install iterm2
 ```
-- If it fails because of rights, run: `sudo chown -R aas /usr/local/bin/Homebrew`
 
+```
 brew install zsh oh-my-zsh
-brew cask install sublime-text2 spotify spectacle sourcetree openconnect dotfiles keystore-explorer
+brew cask install google-chrome spotify spectacle openconnect dotfiles keystore-explorer
 brew install tig
 ```
 
@@ -20,6 +21,9 @@ Consider adding these to a separate scripts file
 ```
 # Make sure tags are pushed by default in Git
 git config --global push.followTags true
+
+# Clone dotfiles repo to machine
+git clone git@github.com:asjafjell/dotfiles.git ~/$(whoami)/.dotfiles
 
 # Symlink Zsh config file to dotfiles repo
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
