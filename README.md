@@ -101,6 +101,9 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 # Different screenshots folder
 mkdir -p "${HOME}/Screenshots"
 defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
+
+# Disable autocorrect
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 ```
 
 ## Other interesting dotfiles used for inspo
