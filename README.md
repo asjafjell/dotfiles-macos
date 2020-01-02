@@ -9,6 +9,7 @@ brew doctor # Do all fixes
 brew cask install iterm2
 ```
 
+### In Iterm
 ```
 brew install caskroom/cask/brew-cask
 brew install brew-cask-completion
@@ -21,6 +22,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 brew cask install intellij-idea slack google-chrome spotify spectacle keystore-explorer
 brew install tig
+```
+
+#### Intalling Java:
+
+```
+brew tap AdoptOpenJDK/openjdk
+brew cask install <version> #https://github.com/AdoptOpenJDK/homebrew-openjdk
 ```
 
 ## Setup commandos 
