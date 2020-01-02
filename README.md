@@ -14,6 +14,7 @@ brew install caskroom/cask/brew-cask
 brew install brew-cask-completion
 brew tap caskroom/cask
 brew tap caskroom/versions
+brew tap homebrew/cask-versions
 
 brew install zsh 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
