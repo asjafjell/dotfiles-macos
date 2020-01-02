@@ -1,8 +1,16 @@
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
-# BREW
+############
+# Homebrew #
+############
+
 export PATH="$(brew --prefix)/bin:$PATH"
+
+# Shell completion, https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 
 ######################
 #      ALIAS         #
@@ -78,3 +86,4 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 #################################
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+export PATH="/usr/local/sbin:$PATH"
