@@ -87,3 +87,9 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 export PATH="/usr/local/sbin:$PATH"
+
+#################################
+## Smarte kommandoer           ##
+#################################
+
+alias hgrep="fc -liD 10 | grep"
