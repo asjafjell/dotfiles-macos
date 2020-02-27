@@ -1,6 +1,3 @@
-# JAVA
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
 ############
 # Homebrew #
 ############
@@ -19,13 +16,6 @@ fi
 # Hvordan gjøre sånn at stier kan brukes som erstatning i kommandoer, ikke bare for å gå til en mappe
 # Se https://askubuntu.com/questions/758496/how-to-make-a-permanent-alias-in-oh-my-zsh for mer info
 setopt AUTO_CD
-
-hash -d digi=~/projects/digipost/
-hash -d dp=~/projects/digipost/digipost/
-hash -d sign=~/projects/digipost/signering/
-hash -d signf=~/projects/digipost/signering-frontend/
-hash -d signd=~/projects/digipost/signature-api-client-dotnet 
-hash -d pi=~/projects/private/hue-server
 
 ########################
 # Oh-my-zsh-config     #
@@ -54,33 +44,6 @@ plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-######################
-#     DIGIPOST       #
-######################
-
-DIGIPOST_HOME=$HOME/projects/digipost
-DPOST_REPOS_PATH=/projects/digipost
-
-source $HOME/.digipostrc
-
-# Alias pass-kommandoer slik  at vi kan alternere lettere mellom de
-alias dppass="export PASSWORD_STORE_DIR=${DPOST_REPOS_PATH}/digipost-passwords"
-alias vpnpass="export PASSWORD_STORE_DIR=${DPOST_REPOS_PATH}/vpn-passwords"
-
-############################
-## Oppsett dotnet og mono ##
-############################
-
-# Link up mono install path
-export PATH=/Library/Frameworks/Mono.framework/Versions/Current/bin:$PATH
-
-# Link up dotnet install path
-# ln -s /usr/local/share/dotnet/dotnet /usr/local/bin/
-
-# added by travis gem
-[ -f /Users/aas/.travis/travis.sh ] && source /Users/aas/.travis/travis.sh
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-
 #################################
 ## Jenv			       ##
 #################################
@@ -93,3 +56,4 @@ export PATH="/usr/local/sbin:$PATH"
 #################################
 
 alias hgrep="fc -liD 10 | grep"
+
