@@ -28,7 +28,8 @@ brew install tig
 
 ```
 brew tap AdoptOpenJDK/openjdk
-brew cask install <version> #https://github.com/AdoptOpenJDK/homebrew-openjdk
+brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}  #https://github.com/AdoptOpenJDK/homebrew-openjdk
+brew install jenv
 ```
 
 ## Setup commandos 
