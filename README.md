@@ -22,6 +22,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 brew cask install intellij-idea slack google-chrome spotify spectacle keystore-explorer
 brew install tig
+brew cask install bettertouchtool #Enable cloud backup in settings. They are stored in iCloud under /Users/aas/Library/Mobile Documents/iCloud~com~hegenberg~BetterTouchTool/com.mentalfaculty.ensembles.clouddata
 ```
 
 #### Intalling Java:
