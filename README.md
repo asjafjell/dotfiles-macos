@@ -14,11 +14,13 @@ chmod 600 ~/.ssh/config
 
 Add the following to `~/.ssh/config`
 ```
-host github.com
- HostName github.com
- IdentityFile ~/.ssh/id_rsa_github
- User git
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
 ```
+
+Follow the guide at [Github for SSH setup](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) if any problems
 
 ## Install apps
 
@@ -33,7 +35,6 @@ brew cask install iterm2
 ```
 brew install brew install homebrew/cask-cask/brew-cask
 brew install brew-cask-completion
-brew tap caskroom/versions
 brew tap homebrew/cask-versions
 
 brew install zsh 
