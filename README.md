@@ -7,6 +7,17 @@ mkdir ~/.ssh/
 cp ~/Downloads/id_rsa ~/.ssh/
 chmod 400 ~/.ssh/id_rsa #Fixes error Permissions 0644 for '/Users/*/.ssh/id_rsa' are too open.
 ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+
+touch ~/.ssh/config
+chmod 600 ~/.ssh/config
+```
+
+Add the following to `~/.ssh/config`
+```
+host github.com
+ HostName github.com
+ IdentityFile ~/.ssh/id_rsa_github
+ User git
 ```
 
 ## Install apps
