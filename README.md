@@ -11,7 +11,7 @@ brew cask install iterm2
 
 ### In Iterm
 ```
-brew install caskroom/cask/brew-cask
+brew install brew install homebrew/cask-cask/brew-cask
 brew install brew-cask-completion
 brew tap caskroom/versions
 brew tap homebrew/cask-versions
