@@ -1,5 +1,4 @@
 Host *
-  User aas
   ForwardAgent yes
   UseKeychain yes
   AddKeysToAgent yes  
