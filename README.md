@@ -1,61 +1,7 @@
 # Dotfiles
 
-## Set up .ssh key
-1. Download .ssh private key, move to .ssh folder, and create public key
-```
-mkdir ~/.ssh/
-cp ~/Downloads/id_rsa ~/.ssh/
-chmod 400 ~/.ssh/id_rsa #Fixes error Permissions 0644 for '/Users/*/.ssh/id_rsa' are too open.
-ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
-
-touch ~/.ssh/config
-chmod 600 ~/.ssh/config
-```
-
-Add the following to `~/.ssh/config`
-```
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
-```
-
-Follow the guide at [Github for SSH setup](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) if any problems
-
-## Install apps
-
-### In Terminal
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew doctor # Do all fixes
-brew cask install iterm2
-```
-
-### In Iterm
-```
-brew install brew install homebrew/cask-cask/brew-cask
-brew install brew-cask-completion
-brew tap homebrew/cask-versions
-
-brew install zsh 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-brew cask install intellij-idea slack spotify spectacle keystore-explorer fantastical inkdrop google-chrome 
-brew install tig
-brew cask install bettertouchtool #Enable cloud backup in settings. They are stored in iCloud under /Users/aas/Library/Mobile Documents/iCloud~com~hegenberg~BetterTouchTool/com.mentalfaculty.ensembles.clouddata
-```
-
-#### Intalling Java:
-
-```
-brew tap AdoptOpenJDK/openjdk
-brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}  #https://github.com/AdoptOpenJDK/homebrew-openjdk
-brew install jenv
-```
-
 ## Setup commandos 
-Consider adding these to a separate scripts file
-
+Adds config for `zsh`, `ssh` with this repo
 ```
 # Make sure tags are pushed by default in Git
 git config --global push.followTags true
@@ -139,6 +85,49 @@ defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
 # Disable autocorrect
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 ```
+
+## Set up .ssh key
+1. Download .ssh private key, move to .ssh folder, and create public key
+```
+mkdir ~/.ssh/
+cp ~/Downloads/id_rsa ~/.ssh/
+chmod 400 ~/.ssh/id_rsa #Fixes error Permissions 0644 for '/Users/*/.ssh/id_rsa' are too open.
+ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+```
+
+Follow the guide at [Github for SSH setup](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) if any problems arise.
+
+## Install apps
+
+### In Terminal
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor # Do all fixes
+brew cask install iterm2
+```
+
+### In Iterm
+```
+brew install brew install homebrew/cask-cask/brew-cask
+brew install brew-cask-completion
+brew tap homebrew/cask-versions
+
+brew install zsh 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+brew cask install intellij-idea slack spotify spectacle keystore-explorer fantastical inkdrop google-chrome 
+brew install tig
+brew cask install bettertouchtool #Enable cloud backup in settings. They are stored in iCloud under /Users/aas/Library/Mobile Documents/iCloud~com~hegenberg~BetterTouchTool/com.mentalfaculty.ensembles.clouddata
+```
+
+#### Intalling Java:
+
+```
+brew tap AdoptOpenJDK/openjdk
+brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}  #https://github.com/AdoptOpenJDK/homebrew-openjdk
+brew install jenv
+```
+
 
 ## Other interesting dotfiles used for inspo
 1. [nicsp](https://github.com/nicksp/dotfiles/blob/master/osx/set-defaults.sh) (See the script in repo for setting up MacOS-spesific things)
