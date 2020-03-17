@@ -57,3 +57,21 @@ export PATH="/usr/local/sbin:$PATH"
 
 alias hgrep="fc -liD 10 | grep"
 
+#################################
+## Work apps setup             ##
+#################################
+
+#Sqlite
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+
+#Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
+#Getttext
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/gettext/lib"
+export CPPFLAGS="-I/usr/local/opt/gettext/include"
