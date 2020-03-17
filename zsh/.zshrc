@@ -21,7 +21,7 @@ setopt AUTO_CD
 # Oh-my-zsh-config     #
 ########################
 
-#Disable security verification 
+# Disable security verification 
 ZSH_DISABLE_COMPFIX=true
 
 # If you come from bash you might have to change your $PATH.
