@@ -27,25 +27,29 @@ ZSH_DISABLE_COMPFIX=true
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+################################
+## Zsh-config                 ##
+################################
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="af-magic"
+# Manage Oh-My-Zsh plugins with Antigen 
+source /usr/local/share/antigen/antigen.zsh
 
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
 
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/.dotfiles/zsh/ZSH_CUSTOM
+# Bundles from the default repo - robbyrussell's oh-my-zsh
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-autosuggestions
 
-source $ZSH/oh-my-zsh.sh
+# Load theme
+antigen theme af-magic 
+
+antigen apply
 
 #################################
 ## Jenv			       ##
