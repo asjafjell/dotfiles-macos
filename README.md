@@ -120,10 +120,12 @@ brew cask install bettertouchtool #Enable cloud backup in settings. They are sto
 #### Intalling Java:
 
 ```
+brew cask install adoptopenjdk
 brew tap AdoptOpenJDK/openjdk
-brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}  #https://github.com/AdoptOpenJDK/homebrew-openjdk
+brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}
 brew install jenv
 ```
+See more info about OpenJDK [here](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 
 
 ## Other interesting dotfiles used for inspo
