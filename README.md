@@ -117,6 +117,15 @@ brew install tig
 brew cask install bettertouchtool #Enable cloud backup in settings. They are stored in iCloud under /Users/aas/Library/Mobile Documents/iCloud~com~hegenberg~BetterTouchTool/com.mentalfaculty.ensembles.clouddata
 ```
 
+#### Installing Iterm plugins with Antigen
+`.zshrc` defines plugin installation with Antigen. To do that, Anttigen.zsh must be present:
+```sh
+mkdir /usr/local/share/antigen
+cd /usr/local/share/antigen
+curl -L git.io/antigen > antigen.zsh
+```
+See more info about Antigen [here](https://github.com/zsh-users/antigen)
+
 #### Intalling Java:
 
 ```
