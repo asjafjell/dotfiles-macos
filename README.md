@@ -6,8 +6,8 @@ Adds config for `zsh`, `ssh` with this repo
 # Make sure tags are pushed by default in Git
 git config --global push.followTags true
 
-# Clone dotfiles repo to machine
-git clone git@github.com:asjafjell/dotfiles.git ~/.dotfiles
+# Clone dotfiles repo to machine with http, because the repo holds ssh config we need later on
+git clone https://github.com/asjafjell/dotfiles.git ~/.dotfiles
 
 # Symlink Zsh config file to dotfiles repo
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
