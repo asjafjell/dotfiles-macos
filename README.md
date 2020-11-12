@@ -112,7 +112,7 @@ brew tap homebrew/cask-versions
 brew install zsh 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-brew cask install intellij-idea slack spotify spectacle keystore-explorer fantastical inkdrop google-chrome 
+brew cask install google-chrome intellij-idea slack spotify spectacle keystore-explorer fantastical inkdrop
 brew install tig
 brew cask install bettertouchtool #Enable cloud backup in settings. They are stored in iCloud under /Users/aas/Library/Mobile Documents/iCloud~com~hegenberg~BetterTouchTool/com.mentalfaculty.ensembles.clouddata
 ```
