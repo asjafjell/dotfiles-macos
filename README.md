@@ -134,11 +134,16 @@ brew tap AdoptOpenJDK/openjdk
 brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}
 brew install jenv
 
+# Add all versions to java 
 ls Library/Java/JavaVirtualMachines 
 jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-12.jdk/Contents/Home
 jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home
+
+# Enable maven plugin
+jenv enable-plugin maven
+jenv enable-plugin export
 
 ```
 See more info about OpenJDK [here](https://github.com/AdoptOpenJDK/homebrew-openjdk)
