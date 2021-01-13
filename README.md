@@ -129,9 +129,9 @@ See more info about Antigen [here](https://github.com/zsh-users/antigen)
 #### Intalling Java:
 
 ```
-brew cask install adoptopenjdk
+brew install --cask adoptopenjdk
 brew tap AdoptOpenJDK/openjdk
-brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}
+brew install --cask AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}
 brew install jenv
 
 # Add all versions to java 
