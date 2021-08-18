@@ -129,22 +129,24 @@ See more info about Antigen [here](https://github.com/zsh-users/antigen)
 #### Intalling Java:
 
 ```
-brew install --cask adoptopenjdk
-brew tap AdoptOpenJDK/openjdk
-brew install --cask AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}
-brew install jenv
+# Install versions often used in Eika
+brew install --cask temurin 8
+brew install --cask temurin 11
+brew install --cask temurin 12
 
-# Add all versions to java 
+# Install latest
+brew install --cask temurin  
+
+# Add all versions to jenv
 ls Library/Java/JavaVirtualMachines 
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-12.jdk/Contents/Home
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/temurin-12.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/temurin-[replace with latest].jdk/Contents/Home
 
-# Enable maven plugin
+# Enable maven plugin - makes maven respect Jenv.
 jenv enable-plugin maven
 jenv enable-plugin export
-
 ```
 See more info about OpenJDK [here](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 
