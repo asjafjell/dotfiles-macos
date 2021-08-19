@@ -130,6 +130,7 @@ See more info about Antigen [here](https://github.com/zsh-users/antigen)
 
 ```
 # Install versions often used in Eika
+brew tap homebrew/cask-versions
 brew install --cask temurin 8
 brew install --cask temurin 11
 brew install --cask temurin 12
