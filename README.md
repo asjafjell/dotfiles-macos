@@ -129,11 +129,11 @@ See more info about Antigen [here](https://github.com/zsh-users/antigen)
 #### Intalling Java:
 
 ```
-# Install versions often used in Eika
+# Install versions often used
 brew tap homebrew/cask-versions
-brew install --cask temurin 8
-brew install --cask temurin 11
-brew install --cask temurin 12
+brew install --cask temurin8
+brew install --cask temurin11
+brew install --cask temurin12
 
 # Install latest
 brew install --cask temurin  
