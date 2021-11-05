@@ -21,7 +21,7 @@ setopt AUTO_CD
 # Oh-my-zsh-config     #
 ########################
 
-# Disable security verification 
+# Disable security verification
 ZSH_DISABLE_COMPFIX=true
 
 # If you come from bash you might have to change your $PATH.
@@ -31,7 +31,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 ## Zsh-config                 ##
 ################################
 
-# Manage Oh-My-Zsh plugins with Antigen 
+# Manage Oh-My-Zsh plugins with Antigen
 source /usr/local/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library
@@ -47,7 +47,7 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Load theme
-antigen theme af-magic 
+antigen theme af-magic
 
 antigen apply
 
@@ -63,6 +63,18 @@ export PATH="/usr/local/sbin:$PATH"
 #################################
 
 alias hgrep="fc -liD 10 | grep"
+
+# Delete merged branches
+alias delete-local-branches = for branch in $(git branch -v | grep "gone" | awk '{print $1}'); do git branch -d $branch; done
+
+#################################
+## Nvm setup                   ##
+#################################
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 
 #################################
 ## Work apps setup             ##
@@ -82,3 +94,7 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/gettext/lib"
 export CPPFLAGS="-I/usr/local/opt/gettext/include"
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
+
+#Intellij
+export PATH="/Applications/IntelliJ IDEA.app/Contents/bin:$PATH"
