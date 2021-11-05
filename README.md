@@ -6,8 +6,8 @@ Adds config for `zsh`, `ssh` with this repo
 # Make sure tags are pushed by default in Git
 git config --global push.followTags true
 
-# Clone dotfiles repo to machine
-git clone git@github.com:asjafjell/dotfiles.git ~/.dotfiles
+# Clone dotfiles repo to machine with http, because the repo holds ssh config we need later on
+git clone https://github.com/asjafjell/dotfiles.git ~/.dotfiles
 
 # Symlink Zsh config file to dotfiles repo
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
@@ -112,18 +112,44 @@ brew tap homebrew/cask-versions
 brew install zsh 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-brew cask install intellij-idea slack spotify spectacle keystore-explorer fantastical inkdrop google-chrome 
+brew cask install google-chrome intellij-idea slack spotify keystore-explorer fantastical inkdrop
 brew install tig
 brew cask install bettertouchtool #Enable cloud backup in settings. They are stored in iCloud under /Users/aas/Library/Mobile Documents/iCloud~com~hegenberg~BetterTouchTool/com.mentalfaculty.ensembles.clouddata
 ```
 
+#### Installing Iterm plugins with Antigen
+`.zshrc` defines plugin installation with Antigen. To do that, Anttigen.zsh must be present:
+```sh
+mkdir /usr/local/share/antigen
+cd /usr/local/share/antigen
+curl -L git.io/antigen > antigen.zsh
+```
+See more info about Antigen [here](https://github.com/zsh-users/antigen)
+
 #### Intalling Java:
 
 ```
-brew tap AdoptOpenJDK/openjdk
-brew cask install AdoptOpenJDK/openjdk/adoptopenjdk{8,11,12,13}  #https://github.com/AdoptOpenJDK/homebrew-openjdk
-brew install jenv
+# Install versions often used
+brew tap homebrew/cask-versions
+brew install --cask temurin8
+brew install --cask temurin11
+brew install --cask temurin12
+
+# Install latest
+brew install --cask temurin  
+
+# Add all versions to jenv
+ls Library/Java/JavaVirtualMachines 
+jenv add /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/temurin-12.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/temurin-[replace with latest].jdk/Contents/Home
+
+# Enable maven plugin - makes maven respect Jenv.
+jenv enable-plugin maven
+jenv enable-plugin export
 ```
+See more info about OpenJDK [here](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 
 
 ## Other interesting dotfiles used for inspo
