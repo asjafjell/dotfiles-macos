@@ -100,7 +100,7 @@ Follow the guide at [Github for SSH setup](https://help.github.com/en/github/aut
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor # Do all fixes
-brew cask install iterm2
+brew install iterm2 --cask
 ```
 
 ### In Iterm
