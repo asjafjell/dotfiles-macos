@@ -135,7 +135,8 @@ brew install --cask temurin11
 brew install --cask temurin12
 
 # Install latest
-brew install --cask temurin  
+brew install --cask temurin
+brew install jenv
 
 # Add all versions to jenv
 ls Library/Java/JavaVirtualMachines 
