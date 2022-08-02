@@ -87,7 +87,7 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 1. Download .ssh private key, move to .ssh folder, and create public key
 ```
 mkdir ~/.ssh/
-cp ~/Downloads/id_rsa ~/.ssh/
+sudo cp ~/Downloads/id_rsa ~/.ssh/
 chmod 400 ~/.ssh/id_rsa #Fixes error Permissions 0644 for '/Users/*/.ssh/id_rsa' are too open.
 ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 ```
