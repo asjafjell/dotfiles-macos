@@ -98,7 +98,7 @@ Follow the guide at [Github for SSH setup](https://help.github.com/en/github/aut
 
 ### In Terminal
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor # Do all fixes
 brew cask install iterm2
 ```
