@@ -117,12 +117,15 @@ brew install --cask intellij-idea slack spotify keystore-explorer fantastical in
 ```
 
 #### Installing Iterm plugins with Antigen
-`.zshrc` defines plugin installation with Antigen. To do that, Anttigen.zsh must be present:
-```sh
-mkdir /usr/local/share/antigen
-cd /usr/local/share/antigen
-curl -L git.io/antigen > antigen.zsh
 ```
+brew install antigen
+```
+
+If there is a lot of errors during terminal startup, please see that the script for loading antigen.zsh matches the *caveat* in the output of 
+```
+brew info antigen
+```
+
 See more info about Antigen [here](https://github.com/zsh-users/antigen)
 
 #### Intalling Java:
