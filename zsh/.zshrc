@@ -9,6 +9,10 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
+# Allow comments in scripts
+# Makes hash char a signal for comments in scripts
+setopt interactivecomments
+
 ######################
 #      ALIAS         #
 ######################
