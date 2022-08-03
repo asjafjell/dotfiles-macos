@@ -49,6 +49,7 @@ antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle cowboyd/zsh-volta --branch v1
 
 # Load theme
 antigen theme af-magic
@@ -83,21 +84,25 @@ export NVM_DIR="$HOME/.nvm"
 ## Work apps setup             ##
 #################################
 
-#Sqlite
+# Sqlite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 export CPPFLAGS="-I/usr/local/opt/sqlite/include"
 
-#Ruby
+# Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
-#Getttext
+# Getttext
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/gettext/lib"
 export CPPFLAGS="-I/usr/local/opt/gettext/include"
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
 
-#Intellij
+# Intellij
 export PATH="/Applications/IntelliJ IDEA.app/Contents/bin:$PATH"
+
+# Volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
