@@ -94,6 +94,11 @@ ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 
 Follow the guide at [Github for SSH setup](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) if any problems arise.
 
+Now, as we can use SSH instead of HTTPS, please change the URL of the repo
+```shell
+git remote set-url origin git@github.com:asjafjell/dotfiles.git
+```
+
 ## Install apps
 
 ### In Terminal
