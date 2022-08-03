@@ -36,7 +36,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 ################################
 
 # Manage Oh-My-Zsh plugins with Antigen
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library
 antigen use oh-my-zsh
