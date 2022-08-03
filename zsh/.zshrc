@@ -69,8 +69,7 @@ export PATH="/usr/local/sbin:$PATH"
 alias hgrep="fc -liD 10 | grep"
 
 # Delete merged branches
-alias delete-local-branches = for branch in $(git branch -v | grep "gone" | awk '{print $1}'); do git branch -d $branch; done
-
+alias delete-local-branches="git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done"
 #################################
 ## Nvm setup                   ##
 #################################
