@@ -98,3 +98,6 @@ export PATH="/Applications/IntelliJ IDEA.app/Contents/bin:$PATH"
 # Volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Openshift
+export PATH="/Users/aas/.dotfiles/openshift:$PATH" # Add plugins path
