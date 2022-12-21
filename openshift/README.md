@@ -5,5 +5,3 @@
 
 # Writing plugins
 Please see [Openshift documentation](https://docs.openshift.com/container-platform/4.11/cli_reference/openshift_cli/extending-cli-plugins.html) for great instructions.
-
-# Getting plugins installed
