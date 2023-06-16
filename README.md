@@ -133,6 +133,9 @@ brew info antigen
 
 See more info about Antigen [here](https://github.com/zsh-users/antigen)
 
+#### Iterm as dropdown with shortcut
+[This guide from Xun Zhou at dev.io](https://dev.to/vikbert/drop-down-iterm2-in-macos-2od)
+
 #### Intalling Java:
 
 ```
