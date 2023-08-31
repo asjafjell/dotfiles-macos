@@ -1,9 +1,9 @@
 # How to set up Virtual Linux
-The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Workspace` with vaguely similary keyboard setup in order to code. This works where the hardware is a mac with a physical Norwegian keyboard and the virtual device is Ubuntu 22.04.
+The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Workspace` with vaguely similary keyboard setup in order to code. This works where the hardware is a mac with a physical Norwegian keyboard, American English as layout and the virtual device is Ubuntu 22.04.
 
 ## Guide
 
-1. Add keyboard Layout English (US, intl., with dead keys) on Ubuntu.
+1. Add keyboard layout `English (US, intl., with dead keys)` on Ubuntu.
 2. In the Preferences of Citrix Workspace (![image](https://github.com/asjafjell/dotfiles/assets/720545/9b45085d-017e-47a5-8fe0-dca3aeab4c0c)),
    choose the double arrows in the right corner, `Keyboard` and set the following:
    
