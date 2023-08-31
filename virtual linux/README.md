@@ -11,9 +11,12 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
    
    This will map 
    - Right ⌘ button to `Meta`, which we can map in Intellij IDEA.
-   - _Left Option + Left ⌘_ to `Option`
-4. Install the plugin [macOS Keymap](https://plugins.jetbrains.com/plugin/13258-macos-keymap). This plugin adds keymap called _Intellij IDEA Classic (macOS)_ as a keymap. This will have a lot of shortcuts where `Meta` is used.
-5. We must remove a few default shortcuts from Ubuntu in order to use them in Intellij. Remove with the following script:
+   - _Left Option + Left ⌘_ to `Option`     
+3. Map `Windows` key to `Meta`. This is a bit backwards, but it does the trick for giving us a key which can act as a Command key (⌘). In Intellij IDEA, do the following:
+  - _Help -> Edit Custom Properties_,
+  - Add `keymap.windows.as.meta=true` to the file.
+5. Install the plugin [macOS Keymap](https://plugins.jetbrains.com/plugin/13258-macos-keymap). This plugin adds keymap called _Intellij IDEA Classic (macOS)_ as a keymap. This will have a lot of shortcuts where `Meta` is used.
+6. We must remove a few default shortcuts from Ubuntu in order to use them in Intellij. Remove with the following script:
    ```shell
    # Remove shorcuts for Activities:
    gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
@@ -23,6 +26,6 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
    gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]" # Disable Alt + F1
    gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "[]" # Disable Alt + F2
    ```
-6. [Install Frame switcher](https://plugins.jetbrains.com/plugin/7138-frame-switcher) which enables hot swapping between multiple instances of Intellij IDEA. Enables opening recent projects and open projects by search.
-7. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
+7. [Install Frame switcher](https://plugins.jetbrains.com/plugin/7138-frame-switcher) which enables hot swapping between multiple instances of Intellij IDEA. Enables opening recent projects and open projects by search.
+8. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
 
