@@ -13,10 +13,15 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
    - Right ⌘ button to `Meta`, which we can map in Intellij IDEA.
    - _Left Option + Left ⌘_ to `Option`
 4. Install the plugin [macOS Keymap](https://plugins.jetbrains.com/plugin/13258-macos-keymap). This plugin adds keymap called _Intellij IDEA Classic (macOS)_ as a keymap. This will have a lot of shortcuts where `Meta` is used.
-5. We must remove a few default shortcuts from Ubuntu in order to use them in Intellij. One of them are the Activities shortcuts. Remove with the following script:
+5. We must remove a few default shortcuts from Ubuntu in order to use them in Intellij. Remove with the following script:
    ```shell
+   # Remove shorcuts for Activities:
    gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
    for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-application-${i} '[]'; done
+
+   # Remove Show Programs and Run Command:
+   gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]" # Disable Alt + F1
+   gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "[]" # Disable Alt + F2
    ```
    
 
