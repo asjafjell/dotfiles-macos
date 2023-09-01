@@ -28,4 +28,7 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
    ```
 7. [Install Frame switcher](https://plugins.jetbrains.com/plugin/7138-frame-switcher) which enables hot swapping between multiple instances of Intellij IDEA. Enables opening recent projects and open projects by search.
 8. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
+9. Search for _Go to_, set following
+   - `Go to class`: `Ctrl + O`
+   - `Go to class`: `Ctrl + Shift + O`
 
