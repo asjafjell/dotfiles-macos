@@ -1,5 +1,13 @@
-# How to set up Virtual Linux
-The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Workspace` with vaguely similary keyboard setup in order to code. This works where the hardware is a mac with a physical Norwegian keyboard, American English as layout and the virtual device is Ubuntu 22.04.
+# How to set up Virtual Linux for coding in Intellij IDEA
+
+## Purpose 
+The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Workspace` with vaguely similary keyboard setup as on a Mac in order to code. 
+
+This guide is based on a setup where the hardware is a Mac with a physical Norwegian keyboard, American English as layout and the virtual device is Ubuntu 22.04. It may work on other setups.
+
+After doing this guide it will feel like coding on a Mac. Unfortunately, not all key bindings are like the default Mac layout for Intellij IDEA. In addition, not all keys on the bottom row can be mapped directly. You will have to press two keys for Option, and only one Command button acts as command. 
+
+<img width="1045" alt="image" src="https://github.com/asjafjell/dotfiles/assets/720545/1c9c147a-e25c-47b6-9138-ae32af973202">
 
 ## Guide
 
@@ -10,8 +18,8 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
    ![image](https://github.com/asjafjell/dotfiles/assets/720545/3312a09c-4a06-4ab0-8d0a-4dc22b01823a).
    
    This will map 
-   - Right ⌘ button to `Meta`, which we can map in Intellij IDEA.
-   - _Left Option + Left ⌘_ to `Option`     
+   - Right ⌘ button to `Meta`, which we can map in Intellij IDEA to act as the Command button.
+   - _Left Option + Left ⌘_ to `Alt / Option`     
 3. Map `Windows` key to `Meta`. This is a bit backwards, but it does the trick for giving us a key which can act as a Command key (⌘). In Intellij IDEA, do the following:
   - _Help -> Edit Custom Properties_,
   - Add `keymap.windows.as.meta=true` to the file.
