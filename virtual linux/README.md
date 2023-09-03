@@ -44,9 +44,18 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
 9. Search for _Go to_, set following
    - `Go to class`: `Ctrl + O`
    - `Go to class`: `Ctrl + Shift + O`
+10. Search for _Move statement_, set following
+   - `Move statement up`: `Ctrl + Shift + Up`
+   - `Move statement down`: `Ctrl + Shift + Down`
+11. Disable shortcuts for apps/mission control `Ctrl + Up` and `Ctrl + Down` on the Mac hostto enable next/previous method:
+   - System settings -> Keyboard -> Keyboard Shortcuts -> Mission Control
+   - Untick `Mission Control` and `Application Windows`
 
-## Other nifty shortcuts already included in configuration
+## Summary of nifty shortcuts after configuration
 - `Start/end of line`: `fn + Left / Right`
 - `Page up/down`: `fn + Up / Down`
 - `Add selection for next occurence`: `Ctrl + G`
 - `Unselect occurence`: `Ctrl + Shift + G`
+- `Next/Previous method`: `Ctrl + Up/Down`
+- `Move method up/down`: `Ctrl + Shift + Up/Down`
+- `Next/Previous error`:`F2 / Shift + F2`
