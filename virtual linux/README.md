@@ -53,11 +53,10 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
    - Untick `Mission Control` and `Application Windows`
 
 ## Summary of nifty shortcuts after configuration
-- `Start/end of line`: `fn + Left / Right`
+- `Start/end of line`: `fn + Left / Right` or `Cmd + Left / Right`
 - `Page up/down`: `fn + Up / Down`
-- `Add selection for next occurence`: `Ctrl + G`
-- `Unselect occurence`: `Ctrl + Shift + G`
-- `Next/Previous method`: `Ctrl + Up/Down`
+- `Selection for next occurence, Select/unselect`: `Ctrl + G / Ctrl + Shift + G`
+- `Method, Next/Previous`: `Ctrl + Up/Down`
 - `Move method up/down`: `Ctrl + Shift + Up/Down`
-- `Error, Next/Previous error`:`F2 / Shift + F2`
+- `Error, Next/Previous`:`F2 / Shift + F2`
 - `Selection, Increase/Decrease`: `Cmd + W / Cmd + Shift + W`
