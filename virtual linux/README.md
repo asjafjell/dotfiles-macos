@@ -59,4 +59,5 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
 - `Unselect occurence`: `Ctrl + Shift + G`
 - `Next/Previous method`: `Ctrl + Up/Down`
 - `Move method up/down`: `Ctrl + Shift + Up/Down`
-- `Next/Previous error`:`F2 / Shift + F2`
+- `Error, Next/Previous error`:`F2 / Shift + F2`
+- `Selection, Increase/Decrease`: `Cmd + W / Cmd + Shift + W`
