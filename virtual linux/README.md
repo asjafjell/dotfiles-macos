@@ -33,20 +33,30 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
    
    # Remove showe/hide desktop (cmd + D) - enables duplicating lines
    gsettings set org.gnome.desktop.wm.keybindings show-desktop "[]"
-   
-   # Following must be set with Dconf-Redigering, does not work from terminal! 
-   # Enables usage of Cmd + Left/Right
+   ``` 
+   Then manually set the following with the app Dconf-Edit (Dconf-Redigering):
+   ```shell
    gsettings set org.gnome.mutter.keybindings toggle-tiled-left []
    gsettings set org.gnome.mutter.keybindings toggle-tiled-right []
    ```
+
 7. [Install Frame switcher](https://plugins.jetbrains.com/plugin/7138-frame-switcher) which enables hot swapping between multiple instances of Intellij IDEA. Enables opening recent projects and open projects by search.
 8. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
 9. Search for _Go to_, set following
    - `Go to class`: `Ctrl + O`
    - `Go to class`: `Ctrl + Shift + O`
+10. Search for _Move statement_, set following
+   - `Move statement up`: `Ctrl + Shift + Up`
+   - `Move statement down`: `Ctrl + Shift + Down`
+11. Disable shortcuts for apps/mission control `Ctrl + Up` and `Ctrl + Down` on the Mac hostto enable next/previous method:
+   - System settings -> Keyboard -> Keyboard Shortcuts -> Mission Control
+   - Untick `Mission Control` and `Application Windows`
 
-## Other nifty shortcuts already included in configuration
-- `Start/end of line`: `fn + Left / Right`
+## Summary of nifty shortcuts after configuration
+- `Start/end of line`: `fn + Left / Right` or `Cmd + Left / Right`
 - `Page up/down`: `fn + Up / Down`
-- `Add selection for next occurence`: `Ctrl + G`
-- `Unselect occurence`: `Ctrl + Shift + G`
+- `Selection for next occurence, Select/unselect`: `Ctrl + G / Ctrl + Shift + G`
+- `Method, Next/Previous`: `Ctrl + Up/Down`
+- `Move method up/down`: `Ctrl + Shift + Up/Down`
+- `Error, Next/Previous`:`F2 / Shift + F2`
+- `Selection, Increase/Decrease`: `Cmd + W / Cmd + Shift + W`
