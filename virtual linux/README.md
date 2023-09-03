@@ -33,12 +33,13 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
    
    # Remove showe/hide desktop (cmd + D) - enables duplicating lines
    gsettings set org.gnome.desktop.wm.keybindings show-desktop "[]"
-   
-   # Following must be set with Dconf-Redigering, does not work from terminal! 
-   # Enables usage of Cmd + Left/Right
+   ``` 
+   Then manually set the following with the app Dconf-Edit (Dconf-Redigering):
+   ```shell
    gsettings set org.gnome.mutter.keybindings toggle-tiled-left []
    gsettings set org.gnome.mutter.keybindings toggle-tiled-right []
    ```
+
 7. [Install Frame switcher](https://plugins.jetbrains.com/plugin/7138-frame-switcher) which enables hot swapping between multiple instances of Intellij IDEA. Enables opening recent projects and open projects by search.
 8. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
 9. Search for _Go to_, set following
