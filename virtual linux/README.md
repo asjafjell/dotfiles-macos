@@ -23,7 +23,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 3. Map `Windows` key to `Meta`. This is a bit backwards, but it does the trick for giving us a key which can act as a Command key (⌘). In Intellij IDEA, do the following:
   - _Help -> Edit Custom Properties_,
   - Add `keymap.windows.as.meta=true` to the file.
-5. Install the plugin [macOS Keymap](https://plugins.jetbrains.com/plugin/13258-macos-keymap). This plugin adds keymap called _Intellij IDEA Classic (macOS)_ as a keymap. This will have a lot of shortcuts where `Meta` is used.
+5. Install the plugin [macOS Keymap](https://plugins.jetbrains.com/plugin/13258-macos-keymap). This plugin adds keymap called _Intellij IDEA Classic (macOS)_ as a keymap - please change to this mapping in Keymap settings. This mapping will have a lot of shortcuts where `Meta` is used.
 6. We must remove a few default shortcuts from Ubuntu in order to use them in Intellij. Remove with the following script:
    ```shell
    # To find other settings, please install app Dconf-Redigering. Most settings are found within 
