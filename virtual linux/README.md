@@ -59,7 +59,12 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 11. Disable shortcuts for apps/mission control `Ctrl + Up` and `Ctrl + Down` on the Mac hostto enable next/previous method:
    - System settings -> Keyboard -> Keyboard Shortcuts -> Mission Control
    - Untick `Mission Control` and `Application Windows`
-12. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis Varslingsliste`.
+12. Change shortcut `Find in files` to `Meta + Shift + F`
+12. Change shortcut `Replace in files` to `Meta + Shift + R`
+13. Change shortcut `Close tab` in `Editor close actions` to `Meta + W`
+14. Change shortcut `Delete line` in `Editor Actions` to `Meta + Backspace`
+15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
+16. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
 
 ## Summary of nifty shortcuts after configuration
 - `Start/end of line`: `fn + Left / Right` or `Cmd + Left / Right`
@@ -69,3 +74,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Move method up/down`: `Ctrl + Shift + Up/Down`
 - `Error, Next/Previous`:`F2 / Shift + F2`
 - `Selection, Increase/Decrease`: `Cmd + W / Cmd + Shift + W`
+- `Find in files`: `Meta + Shift + F`
+- `Replace in files`: `Meta + Shift + R`
+- `Close tab`: `Meta + W`
+- `Delete line`: `Meta + Backspace`
