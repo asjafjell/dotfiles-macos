@@ -59,6 +59,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 11. Disable shortcuts for apps/mission control `Ctrl + Up` and `Ctrl + Down` on the Mac hostto enable next/previous method:
    - System settings -> Keyboard -> Keyboard Shortcuts -> Mission Control
    - Untick `Mission Control` and `Application Windows`
+12. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis Varslingsliste`.
 
 ## Summary of nifty shortcuts after configuration
 - `Start/end of line`: `fn + Left / Right` or `Cmd + Left / Right`
