@@ -9,8 +9,15 @@ git config --global push.followTags true
 # Clone dotfiles repo to machine with http, because the repo holds ssh config we need later on
 git clone https://github.com/asjafjell/dotfiles.git ~/.dotfiles
 
-# Symlink Zsh config file to dotfiles repo
+#############################################
+# Symlink Zsh config file to dotfiles repo  #
+#############################################
+
+# MacOS:
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
+
+# Linux
+ln -s ~/.dotfiles/zsh/linux.zshrc ~/.zshrc
 
 # Symlink SSH config to dotfiles repo
 ln -s ~/.dotfiles/ssh/config ~/.ssh/config
