@@ -63,6 +63,11 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 12. Change shortcut `Replace in files` to `Meta + Shift + R`
 13. Change shortcut `Close tab` in `Editor close actions` to `Meta + W`
 14. Change shortcut `Delete line` in `Editor Actions` to `Meta + Backspace`
+14. Change shortcut `Show usages` to `Ctrl + Option + F7` (Remember `Option` is as described in picture above)
+14. Change shortcut `Debug` in `Run/Debug` to `Ctrl + D`
+14. Change shortcut `Debug context configuration` to `Ctrl + Shift + D`
+14. Change shortcut `Run` in `Run/Debug` to `Ctrl + R`
+14. Change shortcut `Run context configuration` to `Ctrl + Shift + R`
 15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
 16. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
 
@@ -78,3 +83,8 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Replace in files`: `Meta + Shift + R`
 - `Close tab`: `Meta + W`
 - `Delete line`: `Meta + Backspace`
+- `Open scratch file`: `Ctrl + Shift + N`
+- `Show usages` to `Ctrl + Option + F7`
+- `Debug` previous run: `Ctrl + D`
+- `Debug in current context` to `Ctrl + Shift + D`
+- `Toggle line breakpoint` to `CMD + F8`
