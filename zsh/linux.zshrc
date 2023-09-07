@@ -71,9 +71,11 @@ alias delete-local-branches="git fetch -p && for branch in $(git branch -vv | gr
 #################################
 
 # Import all passwords
-if [ -f .zshpasswords ]; then
-    source .zshpasswords
+if [ -f ~/.zshpasswords ]; then
+    source ~/.zshpasswords
 else
-    print ".zshpasswords not found."
+    print "~/.zshpasswords not found."
 fi
 
+# Jabba setup (added by install script at Github repo)
+[ -s "/home/alesja/.jabba/jabba.sh" ] && source "/home/alesja/.jabba/jabba.sh"
