@@ -70,7 +70,10 @@ alias delete-local-branches="git fetch -p && for branch in $(git branch -vv | gr
 ## Work apps setup             ##
 #################################
 
-export PATH="$VOLTA_HOME/bin:$PATH"
+# Import all passwords
+if [ -f .zshpasswords ]; then
+    source .zshpasswords
+else
+    print ".zshpasswords not found."
+fi
 
-# Openshift
-export PATH="/Users/aas/.dotfiles/openshift:$PATH" # Add plugins path
