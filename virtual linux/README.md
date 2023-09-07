@@ -3,7 +3,7 @@
 ## Purpose 
 The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Workspace` with vaguely similary keyboard setup as on a Mac in order to code. 
 
-This guide is based on a setup where the hardware is a Mac with a physical Norwegian keyboard, American English as layout and the virtual device is Ubuntu 22.04. It may work on other setups.
+This guide is based on a setup where the hardware is a Mac with a physical Norwegian keyboard, American English as layout and the virtual device is Ubuntu 20.04. It may work on other setups.
 
 After doing this guide it will feel like coding on a Mac. Unfortunately, not all key bindings are like the default Mac layout for Intellij IDEA. In addition, not all keys on the bottom row can be mapped directly. You will have to press two keys for Option, and only one Command button acts as command. 
 
