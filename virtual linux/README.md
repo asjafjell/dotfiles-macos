@@ -68,6 +68,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 14. Change shortcut `Debug context configuration` to `Ctrl + Shift + D`
 14. Change shortcut `Run` in `Run/Debug` to `Ctrl + R`
 14. Change shortcut `Run context configuration` to `Ctrl + Shift + R`
+14. Add shortcut `Comment with line comment` to `Meta + Minus` or `Meta + /`
 15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
 16. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
 
