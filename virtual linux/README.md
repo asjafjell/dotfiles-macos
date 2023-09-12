@@ -47,6 +47,8 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
    gsettings set org.gnome.mutter.keybindings toggle-tiled-left []
    gsettings set org.gnome.mutter.keybindings toggle-tiled-right []
    ```
+   Then remove one frome GUI so that we can select all text in a file:
+   `Innstillinger -> Tastatursnarveier -> Vis alle programmer ` : Disable
 
 7. [Install Frame switcher](https://plugins.jetbrains.com/plugin/7138-frame-switcher) which enables hot swapping between multiple instances of Intellij IDEA. Enables opening recent projects and open projects by search.
 8. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
