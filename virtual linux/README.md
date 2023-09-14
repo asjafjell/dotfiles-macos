@@ -31,7 +31,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
    # Choosing a shortcut, right click and copy gives a setting like the one under here. Emptying the
    # array removes all shortcuts for that functionality
    
-   # Remove shorcuts for Activities:
+   # Remove shortcuts for Activities:
    gsettings set org.gnome.shell.extensions.dash-to-dock hot-keys false
    for i in $(seq 1 9); do gsettings set org.gnome.shell.keybindings switch-to-application-${i} '[]'; done
 
@@ -41,12 +41,15 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
    
    # Remove showe/hide desktop (cmd + D) - enables duplicating lines
    gsettings set org.gnome.desktop.wm.keybindings show-desktop "[]"
+   
+   # Remove moving windows right and left
+   gsettings set org.gnome.mutter.keybindings toggle-tiled-left "[]"
+   gsettings set org.gnome.mutter.keybindings toggle-tiled-right "[]"
+   
+   # Disable right click window menu - to enable Quick definition / peek
+    gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "[]"      
    ``` 
-   Then manually set the following with the app Dconf-Edit (Dconf-Redigering):
-   ```shell
-   gsettings set org.gnome.mutter.keybindings toggle-tiled-left []
-   gsettings set org.gnome.mutter.keybindings toggle-tiled-right []
-   ```
+ 
    Then remove one frome GUI so that we can select all text in a file:
    `Innstillinger -> Tastatursnarveier -> Vis alle programmer ` : Disable
 
@@ -58,9 +61,10 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 10. Search for _Move statement_, set following
    - `Move statement up`: `Ctrl + Shift + Up`
    - `Move statement down`: `Ctrl + Shift + Down`
-11. Disable shortcuts for apps/mission control `Ctrl + Up` and `Ctrl + Down` on the Mac hostto enable next/previous method:
+11. Disable shortcuts for apps/mission control `Ctrl + Up` and `Ctrl + Down` on the Mac host to enable next/previous method:
    - System settings -> Keyboard -> Keyboard Shortcuts -> Mission Control
    - Untick `Mission Control` and `Application Windows`
+12. Disable shortcut for `Spotlight -> Show Finder search window` on the Mac host.
 12. Change shortcut `Find in files` to `Meta + Shift + F`
 12. Change shortcut `Replace in files` to `Meta + Shift + R`
 13. Change shortcut `Close tab` in `Editor close actions` to `Meta + W`
@@ -71,6 +75,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 14. Change shortcut `Run` in `Run/Debug` to `Ctrl + R`
 14. Change shortcut `Run context configuration` to `Ctrl + Shift + R`
 14. Add shortcut `Comment with line comment` to `Meta + Minus` or `Meta + /`
+15. Change shortcut `Quick definition` to `Option + Space`
 15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
 16. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
 
