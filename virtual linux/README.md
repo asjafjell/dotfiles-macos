@@ -53,8 +53,8 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 7. [Install Frame switcher](https://plugins.jetbrains.com/plugin/7138-frame-switcher) which enables hot swapping between multiple instances of Intellij IDEA. Enables opening recent projects and open projects by search.
 8. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
 9. Search for _Go to_, set following
-   - `Go to class`: `Ctrl + O`
-   - `Go to class`: `Ctrl + Shift + O`
+   - `Go to class` in `Go to by Name Actions`: `Ctrl + O`
+   - `Go to file` in `Go to by Name Actions` : `Ctrl + Shift + O`
 10. Search for _Move statement_, set following
    - `Move statement up`: `Ctrl + Shift + Up`
    - `Move statement down`: `Ctrl + Shift + Down`
