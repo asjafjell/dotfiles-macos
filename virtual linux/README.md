@@ -42,14 +42,18 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
    # Remove showe/hide desktop (cmd + D) - enables duplicating lines
    gsettings set org.gnome.desktop.wm.keybindings show-desktop "[]"
    
-   # Remove moving windows right and left
+   # Remove move window to left and right part of screen
    gsettings set org.gnome.mutter.keybindings toggle-tiled-left "[]"
    gsettings set org.gnome.mutter.keybindings toggle-tiled-right "[]"
+   
+   # Remove resizing shortcuts Alt + F7 / F8
+   gsettings set org.gnome.desktop.wm.keybindings begin-resize "[]"
+   gsettings set org.gnome.desktop.wm.keybindings begin-move "[]"
    
    # Disable right click window menu - to enable Quick definition / peek
     gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "[]"      
    ``` 
- 
+
    Then remove one frome GUI so that we can select all text in a file:
    `Innstillinger -> Tastatursnarveier -> Vis alle programmer ` : Disable
 
@@ -74,6 +78,9 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 14. Change shortcut `Debug context configuration` to `Ctrl + Shift + D`
 14. Change shortcut `Run` in `Run/Debug` to `Ctrl + R`
 14. Change shortcut `Run context configuration` to `Ctrl + Shift + R`
+15. Change shortcut `Quick documentation` to `F1`
+16. Change shortcut `Left` in `Navigate` to `Ctrl + Option + Left` (You have to hold `Option` even if it does not show in the shortcut)
+16. Change shortcut `Right` in `Navigate` to `Ctrl + Option + Right` (You have to hold `Option` even if it does not show in the shortcut)
 14. Add shortcut `Comment with line comment` to `Meta + Minus` or `Meta + /`
 15. Change shortcut `Quick definition` to `Option + Space`
 15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
@@ -94,5 +101,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Open scratch file`: `Ctrl + Shift + N`
 - `Show usages` to `Ctrl + Option + F7`
 - `Debug` previous run: `Ctrl + D`
-- `Debug in current context` to `Ctrl + Shift + D`
-- `Toggle line breakpoint` to `CMD + F8`
+- `Debug in current context`: `Ctrl + Shift + D`
+- `Toggle line breakpoint`: `CMD + F8`
+- `Evaluate expression`: `Alt + F8`
+- `Quick evaluate expression`: `Cmd + Alt + F8`
