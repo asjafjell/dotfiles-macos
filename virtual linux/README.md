@@ -5,22 +5,23 @@ The purpose of this setup is to be able to use Intellij IDEA in an `Citrix Works
 
 This guide is based on a setup where the hardware is a Mac with a physical Norwegian keyboard, American English as layout and the virtual device is Ubuntu 20.04. It may work on other setups.
 
-After doing this guide it will feel like coding on a Mac. Unfortunately, not all key bindings are like the default Mac layout for Intellij IDEA. In addition, not all keys on the bottom row can be mapped directly. You will have to press two keys for Option, and only one Command button acts as command. 
+After doing this guide it will feel like coding on a Mac. Unfortunately, not all key bindings are like the default Mac layout for Intellij IDEA. In addition, not all keys on the bottom row can be mapped correctly. Only the right Option key will act as a Command key, and only in Intellij IDEA.
 
-<img width="1045" alt="image" src="https://github.com/asjafjell/dotfiles/assets/720545/1c9c147a-e25c-47b6-9138-ae32af973202">
+![Screenshot 2023-09-22 at 17 30 32](https://github.com/asjafjell/dotfiles/assets/720545/840917d1-c2a1-4a04-9bf1-e2a4391c3da0)
 
 ## Guide
 
 1. Add keyboard layout `English (US, intl., with dead keys)` on Ubuntu.
 2. In the Preferences of Citrix Workspace (![image](https://github.com/asjafjell/dotfiles/assets/720545/9b45085d-017e-47a5-8fe0-dca3aeab4c0c)),
    choose the double arrows in the right corner, `Keyboard` and set the following:
+
+   ![image](https://github.com/asjafjell/dotfiles/assets/720545/5c3dd010-a273-40d8-98e4-b7bb40e07a6d)
    
-   ![image](https://github.com/asjafjell/dotfiles/assets/720545/3312a09c-4a06-4ab0-8d0a-4dc22b01823a).
-   
-   This will map 
+   This will map: 
    - Right ⌘ button to `Meta`, which we can map in Intellij IDEA to act as the Command button.
-   - _Left Option + Left ⌘_ to `Alt / Option`     
-3. Map `Windows` key to `Meta`. This is a bit backwards, but it does the trick for giving us a key which can act as a Command key (⌘). In Intellij IDEA, do the following:
+   - _Left Option_ to `Alt / Option`
+   - _Left ⌘_ to Super     
+2. Map `Windows` key to `Meta`. This is a bit backwards, but it does the trick for giving us a key which can act as a Command key (⌘). In Intellij IDEA, do the following:
   - _Help -> Edit Custom Properties_,
   - Add `keymap.windows.as.meta=true` to the file.
 5. Install the plugin [macOS Keymap](https://plugins.jetbrains.com/plugin/13258-macos-keymap). This plugin adds keymap called _Intellij IDEA Classic (macOS)_ as a keymap - please change to this mapping in Keymap settings. This mapping will have a lot of shortcuts where `Meta` is used.
