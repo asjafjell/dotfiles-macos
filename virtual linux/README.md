@@ -83,8 +83,8 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 14. Change shortcut `Run` in `Run/Debug` to `Ctrl + R`
 14. Change shortcut `Run context configuration` to `Ctrl + Shift + R`
 15. Change shortcut `Quick documentation` to `F1`
-16. Change shortcut `Left` in `Navigate` to `Ctrl + Option + Left` (You have to hold `Option` even if it does not show in the shortcut)
-16. Change shortcut `Right` in `Navigate` to `Ctrl + Option + Right` (You have to hold `Option` even if it does not show in the shortcut)
+16. Change shortcut `Left` in `Navigate` to `Meta + Ctrl + Left` 
+16. Change shortcut `Right` in `Navigate` to `Meta + Ctrl + Right` 
 14. Add shortcut `Comment with line comment` to `Meta + Minus` or `Meta + /`
 15. Change shortcut `Quick definition` to `Option + Space` (Peek)
 15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
