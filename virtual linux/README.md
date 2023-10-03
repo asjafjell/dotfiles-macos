@@ -55,7 +55,10 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
    gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "[]"
    
    # Disable CMD + P shortcut for monitor switching
-   gsettings set org.gnome.mutter.keybindings switch-monitor "[]"     
+   gsettings set org.gnome.mutter.keybindings switch-monitor "[]"    
+   
+   # Disable single press on left command button to open window switcher
+   gsettings set org.gnome.mutter overlay-key '' 
    ```
 
    Then remove one frome GUI so that we can select all text in a file:
