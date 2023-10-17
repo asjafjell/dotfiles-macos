@@ -92,6 +92,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 15. Change shortcut `Quick definition` to `Option + Space` (Peek)
 16. Change shortcut `Run` in `Main menu - Run` to `Ctrl + Option + R`
 16. Change shortcut `Debug` in `Main menu - Debug` to `Ctrl + Option + D`
+17. Change shortcut `Resume Program` to `Cmd + Option + R`
 15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
 16. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
 
@@ -116,4 +117,5 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Quick evaluate expression`: `Cmd + Alt + F8`
 - `Quick documentation`: F1
 - `Run` specific configuration menu: `Ctrl + Option + R` 
-- `Debug` specific configuration menu: `Ctrl + Option + D` 
+- `Debug` specific configuration menu: `Ctrl + Option + D`
+- `Resume Program`: `Cmd + Option + R`
