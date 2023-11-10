@@ -119,3 +119,15 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Run` specific configuration menu: `Ctrl + Option + R` 
 - `Debug` specific configuration menu: `Ctrl + Option + D`
 - `Resume Program`: `Cmd + Option + R`
+
+# Ting som kan gå galt
+
+## Når app-meny ikke vises
+
+- Installer og start Gnome tweaks
+   ```shell
+   sudo apt install gnome-tweaks
+   gnome-tweaks
+   ```
+- Velg `Utvidelser`
+- Aktiver med bryter på toppen.
