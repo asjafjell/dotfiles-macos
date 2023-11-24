@@ -123,14 +123,14 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Resume Program`: `Cmd + Option + R`
 - `Select next/previous tab`: `Cmd + Shift + Right/Left`
 
-# Ting som kan gå galt
+# When things go wrong
 
-## Når app-meny ikke vises
+## App menu is hidden
 
-- Installer og start Gnome tweaks
+- Install and start Gnome tweaks
    ```shell
    sudo apt install gnome-tweaks
    gnome-tweaks
    ```
-- Velg `Utvidelser`
-- Aktiver med bryter på toppen.
+- Choose `Utvidelser`
+- Activate with slider switch in the top.
