@@ -93,6 +93,8 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 16. Change shortcut `Run` in `Main menu - Run` to `Ctrl + Option + R`
 16. Change shortcut `Debug` in `Main menu - Debug` to `Ctrl + Option + D`
 17. Change shortcut `Resume Program` to `Cmd + Option + R`
+18. Change shortcut `Select next tab` to `Cmd + Shift + Right` (Choose keep the other places it is used)
+18. Change shortcut `Select previous tab` to `Cmd + Shift + Left` (Choose keep the other places it is used)
 15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
 16. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
 
@@ -116,9 +118,10 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Evaluate expression`: `Alt + F8`
 - `Quick evaluate expression`: `Cmd + Alt + F8`
 - `Quick documentation`: F1
-- `Run` specific configuration menu: `Ctrl + Option + R` 
-- `Debug` specific configuration menu: `Ctrl + Option + D`
+- `Run` by showing the Run-configuration menu: `Ctrl + Option + R` 
+- `Debug` by showing the Debug-configuration menu: `Ctrl + Option + D`
 - `Resume Program`: `Cmd + Option + R`
+- `Select next/previous tab`: `Cmd + Shift + Right/Left`
 
 # Ting som kan gå galt
 
