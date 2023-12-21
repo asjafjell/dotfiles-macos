@@ -35,7 +35,7 @@ ln -s ~/.dotfiles/ssh/config ~/.ssh/config
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Set key repeat more aggressive than what can be done in Settings
-defaults write -g InitialKeyRepeat -int 6 # normal minimum is 15 (225 ms)
+defaults write -g InitialKeyRepeat -int 12 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 # Disable the “Are you sure you want to open this application?” dialog
