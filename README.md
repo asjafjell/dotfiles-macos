@@ -24,9 +24,6 @@ git clone https://github.com/asjafjell/dotfiles.git ~/.dotfiles
 # MacOS:
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
 
-# Linux
-ln -s ~/.dotfiles/zsh/linux.zshrc ~/.zshrc
-
 # Symlink SSH config to dotfiles repo
 ln -s ~/.dotfiles/ssh/config ~/.ssh/config
 
