@@ -100,8 +100,6 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 1. Enable SSH in 1Password
 2. Activate all bells and whistles and let 1Password do it's magic.
 
-```
-
 ## Install apps
 
 ### In Terminal
