@@ -13,6 +13,8 @@ Adds config for `zsh`, `ssh` with this repo
 ```
 # Make sure tags are pushed by default in Git
 git config --global push.followTags true
+git config --global user.name "Aleksander Aas Sjåfjell"
+git config --global user.email github@sjafjell.no
 
 # Clone dotfiles repo to machine with http, because the repo holds ssh config we need later on
 git clone https://github.com/asjafjell/dotfiles.git ~/.dotfiles
@@ -97,7 +99,7 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 ## Set up .ssh key
 1. Enable SSH in 1Password
 2. Activate all bells and whistles and let 1Password do it's magic.
-   
+
 ```
 
 ## Install apps
