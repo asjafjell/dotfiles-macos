@@ -1,7 +1,7 @@
 # Dotfiles
 
 ## Initial keyboard setup for Ergodox EZ
-- Go to System Settings -> Keyboard -> Change keyboard type
+- Go to System Settings -> Keyboard -> Change keyboard type  
   ![image](https://github.com/asjafjell/dotfiles/assets/720545/8cbb5cfe-106f-4b0b-a8cc-d4d8789d866f)
 - Go through the guide pressing the keys on the Mac keyboard
 - Set it to ANSI
