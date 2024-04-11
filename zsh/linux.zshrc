@@ -51,11 +51,10 @@ antigen theme af-magic
 antigen apply
 
 #################################
-## Jenv			       ##
+## Jenv			               ##
 #################################
-# export PATH="$HOME/.jenv/bin:$PATH"
-# eval "$(jenv init -)"
-# export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 #################################
 ## Smarte kommandoer           ##
@@ -76,6 +75,3 @@ if [ -f ~/.zshpasswords ]; then
 else
     print "~/.zshpasswords not found."
 fi
-
-# Jabba setup (added by install script at Github repo)
-[ -s "/home/alesja/.jabba/jabba.sh" ] && source "/home/alesja/.jabba/jabba.sh"
