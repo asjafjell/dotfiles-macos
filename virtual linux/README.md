@@ -97,6 +97,8 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 18. Change shortcut `Select previous tab` to `Cmd + Shift + Left` (Choose keep the other places it is used)
 15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
 16. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
+17. Change Shortcut `Extend Selection  in `Editor Actions` to `Alt + Up`
+17. Change Shortcut `Shrink Selection  in `Editor Actions` to `Alt + Down`
 
 ## Summary of nifty shortcuts after configuration
 - `Start/end of line`: `fn + Left / Right` or `Cmd + Left / Right`
@@ -105,7 +107,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Method, Next/Previous`: `Ctrl + Up/Down`
 - `Move method up/down`: `Ctrl + Shift + Up/Down`
 - `Error, Next/Previous`:`F2 / Shift + F2`
-- `Selection, Increase/Decrease`: `Cmd + W / Cmd + Shift + W`
+- `Selection, Increase/Decrease`: `Alt + Up / Alt Down`
 - `Find in files`: `Meta + Shift + F`
 - `Replace in files`: `Meta + Shift + R`
 - `Close tab`: `Meta + W`
@@ -122,6 +124,7 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
 - `Debug` by showing the Debug-configuration menu: `Ctrl + Option + D`
 - `Resume Program`: `Cmd + Option + R`
 - `Select next/previous tab`: `Cmd + Shift + Right/Left`
+
 
 # When things go wrong
 
