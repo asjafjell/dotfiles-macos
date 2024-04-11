@@ -1,10 +1,20 @@
 # Dotfiles
 
+## Initial keyboard setup for Ergodox EZ
+- Go to System Settings -> Keyboard -> Change keyboard type  
+- ![image](https://github.com/asjafjell/dotfiles/assets/720545/8cbb5cfe-106f-4b0b-a8cc-d4d8789d866f)
+- Go through the guide pressing the keys on the Mac keyboard
+- Set it to ANSI
+- Add input source _ABC, American_
+- Use this input source
+
 ## Setup commandos 
 Adds config for `zsh`, `ssh` with this repo
 ```
 # Make sure tags are pushed by default in Git
 git config --global push.followTags true
+git config --global user.name "Aleksander Aas Sjåfjell"
+git config --global user.email github@sjafjell.no
 
 # Clone dotfiles repo to machine with http, because the repo holds ssh config we need later on
 git clone https://github.com/asjafjell/dotfiles.git ~/.dotfiles
@@ -13,11 +23,7 @@ git clone https://github.com/asjafjell/dotfiles.git ~/.dotfiles
 # Symlink Zsh config file to dotfiles repo  #
 #############################################
 
-# MacOS:
 ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-
-# Linux
-ln -s ~/.dotfiles/zsh/linux.zshrc ~/.zshrc
 
 # Symlink SSH config to dotfiles repo
 ln -s ~/.dotfiles/ssh/config ~/.ssh/config
@@ -91,29 +97,17 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 ```
 
 ## Set up .ssh key
-1. Download .ssh private key, move to .ssh folder, and create public key
-```
-mkdir ~/.ssh/
-sudo cp ~/Downloads/id_rsa ~/.ssh/
-chmod 400 ~/.ssh/id_rsa #Fixes error Permissions 0644 for '/Users/*/.ssh/id_rsa' are too open.
-ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
-```
-
-Follow the guide at [Github for SSH setup](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent) if any problems arise.
-
-Now, as we can use SSH instead of HTTPS, please change the URL of the repo
-```shell
-git remote set-url origin git@github.com:asjafjell/dotfiles.git
-```
+1. Enable SSH in 1Password
+2. Activate all bells and whistles and let 1Password do it's magic.
 
 ## Install apps
 
 ### In Terminal
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 brew doctor # Do all fixes
 brew install iterm2 --cask
-brew install google-chrome --cask
 ```
 
 ### In Iterm
@@ -125,7 +119,7 @@ brew tap homebrew/cask-versions
 brew install zsh 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-brew install --cask intellij-idea slack spotify keystore-explorer fantastical inkdrop 1password
+brew install --cask intellij-idea spotify keystore-explorer fantastical 1password notion
 ```
 
 #### Installing Iterm plugins with Antigen
