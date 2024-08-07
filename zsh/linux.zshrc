@@ -75,3 +75,5 @@ if [ -f ~/.zshpasswords ]; then
 else
     print "~/.zshpasswords not found."
 fi
+
+alias fc='java -jar /home/alesja/code/fellestjenester-cooltools/build/libs/fellestjenester-cooltools-all.jar'
