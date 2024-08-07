@@ -60,45 +60,50 @@ After doing this guide it will feel like coding on a Mac. Unfortunately, not all
    # Disable single press on left command button to open window switcher
    gsettings set org.gnome.mutter overlay-key '' 
    ```
-
+6. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`. 
+6. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
    Then remove one frome GUI so that we can select all text in a file:
    `Innstillinger -> Tastatursnarveier -> Vis alle programmer ` : Disable
 
 7. [Install Frame switcher](https://plugins.jetbrains.com/plugin/7138-frame-switcher) which enables hot swapping between multiple instances of Intellij IDEA. Enables opening recent projects and open projects by search.
-8. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
-9. Search for _Go to_, set following
+
+### Keybindings to set up
+
+There are two different ways to add the shortcuts:
+- Download the [Shortcuts file](IntelliJ%20IDEA%20Classic%20-%20Sjoffa%20edition.xml) and add it to `~/.config/Jetbrains/<CURRENT JETBRAINS VERSION>/keymaps`. Restart the IDE and choose the keymap in `Settings -> Keymap`.
+- Add the shortcuts manually:
+1. _Right click-menu_ keybinding. Add the following shortcut in _Settings -> Keymap_ -> `Show Context Menu`: `Meta + Shift + 0`. 
+1. Search for _Go to_, set following
    - `Go to class` in `Go to by Name Actions`: `Ctrl + O`
    - `Go to file` in `Go to by Name Actions` : `Ctrl + Shift + O`
-10. Search for _Move statement_, set following
+1. Search for _Move statement_, set following
    - `Move statement up`: `Ctrl + Shift + Up`
    - `Move statement down`: `Ctrl + Shift + Down`
-11. Disable shortcuts for apps/mission control `Ctrl + Up` and `Ctrl + Down` on the Mac host to enable next/previous method:
+1. Disable shortcuts for apps/mission control `Ctrl + Up` and `Ctrl + Down` on the Mac host to enable next/previous method:
    - System settings -> Keyboard -> Keyboard Shortcuts -> Mission Control
    - Untick `Mission Control` and `Application Windows`
-12. Disable shortcut for `Spotlight -> Show Finder search window` on the Mac host.
-12. Change shortcut `Find in files` to `Meta + Shift + F`
-12. Change shortcut `Replace in files` to `Meta + Shift + R`
-13. Change shortcut `Close tab` in `Editor close actions` to `Meta + W`
-14. Change shortcut `Delete line` in `Editor Actions` to `Meta + Backspace`
-14. Change shortcut `Show usages` to `Ctrl + Option + F7` (Remember `Option` is as described in picture above)
-14. Change shortcut `Debug` in `Run/Debug` to `Ctrl + D`
-14. Change shortcut `Debug context configuration` to `Ctrl + Shift + D`
-14. Change shortcut `Run` in `Run/Debug` to `Ctrl + R`
-14. Change shortcut `Run context configuration` to `Ctrl + Shift + R`
-15. Change shortcut `Quick documentation` to `F1`
-16. Change shortcut `Left` in `Navigate` to `Meta + Ctrl + Left` 
-16. Change shortcut `Right` in `Navigate` to `Meta + Ctrl + Right` 
-14. Add shortcut `Comment with line comment` to `Meta + Minus` or `Meta + /`
-15. Change shortcut `Quick definition` to `Option + Space` (Peek)
-16. Change shortcut `Run` in `Main menu - Run` to `Ctrl + Option + R`
-16. Change shortcut `Debug` in `Main menu - Debug` to `Ctrl + Option + D`
-17. Change shortcut `Resume Program` to `Cmd + Option + R`
-18. Change shortcut `Select next tab` to `Cmd + Shift + Right` (Choose keep the other places it is used)
-18. Change shortcut `Select previous tab` to `Cmd + Shift + Left` (Choose keep the other places it is used)
-15. Disable notification-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis varslingsliste`.
-16. Disable vis oversikt-shortcut. In Ubuntu settings, go to `Tastatursnarveier`, and remove shortcut `Vis oversikt`.
-17. Change Shortcut `Extend Selection  in `Editor Actions` to `Alt + Up`
-17. Change Shortcut `Shrink Selection  in `Editor Actions` to `Alt + Down`
+1. Disable shortcut for `Spotlight -> Show Finder search window` on the Mac host.
+1. Change shortcut `Find in files` to `Meta + Shift + F`
+1. Change shortcut `Replace in files` to `Meta + Shift + R`
+1. Change shortcut `Close tab` in `Editor close actions` to `Meta + W`
+1. Change shortcut `Delete line` in `Editor Actions` to `Meta + Backspace`
+1. Change shortcut `Show usages` to `Ctrl + Option + F7` (Remember `Option` is as described in picture above)
+1. Change shortcut `Debug` in `Run/Debug` to `Ctrl + D`
+1. Change shortcut `Debug context configuration` to `Ctrl + Shift + D`
+1. Change shortcut `Run` in `Run/Debug` to `Ctrl + R`
+1. Change shortcut `Run context configuration` to `Ctrl + Shift + R`
+1. Change shortcut `Quick documentation` to `F1`
+1. Change shortcut `Left` in `Navigate` to `Meta + Ctrl + Left` 
+1. Change shortcut `Right` in `Navigate` to `Meta + Ctrl + Right` 
+1. Add shortcut `Comment with line comment` to `Meta + Minus` or `Meta + /`
+1. Change shortcut `Quick definition` to `Option + Space` (Peek)
+1. Change shortcut `Run` in `Main menu - Run` to `Ctrl + Option + R`
+1. Change shortcut `Debug` in `Main menu - Debug` to `Ctrl + Option + D`
+1. Change shortcut `Resume Program` to `Cmd + Option + R`
+1. Change shortcut `Select next tab` to `Cmd + Shift + Right` (Choose keep the other places it is used)
+1. Change shortcut `Select previous tab` to `Cmd + Shift + Left` (Choose keep the other places it is used)
+1. Change Shortcut `Extend Selection  in `Editor Actions` to `Alt + Up`
+1. Change Shortcut `Shrink Selection  in `Editor Actions` to `Alt + Down`
 
 ## Summary of nifty shortcuts after configuration
 - `Start/end of line`: `fn + Left / Right` or `Cmd + Left / Right`
