@@ -77,3 +77,6 @@ else
 fi
 
 alias fc='java -jar /home/alesja/code/fellestjenester-cooltools/build/libs/fellestjenester-cooltools-all.jar'
+
+# Path for where filter-repo is installed
+export PATH=$PATH:~/.local/bin
