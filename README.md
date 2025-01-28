@@ -99,6 +99,7 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 ## Set up .ssh key
 1. Enable SSH in 1Password
 2. Activate all bells and whistles and let 1Password do it's magic.
+3. If you are not asked for a login by 1Password when doing e.g. `git pull`, see [the official guide here](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) 
 
 ## Install apps
 
