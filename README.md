@@ -87,31 +87,12 @@ ln -s ~/.dotfiles/ssh/config ~/.ssh/config
 ## Install apps
 
 ### In Terminal
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew doctor # Do all fixes
-brew install iterm2 --cask
-```
-
-### In Iterm
-```
-brew install brew install homebrew/cask-cask/brew-cask
-brew install brew-cask-completion
-brew tap homebrew/cask-versions
-
-brew install zsh 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-brew install --cask intellij-idea spotify keystore-explorer fantastical 1password notion
-```
 
 #### Installing Iterm plugins with Antigen
-```
-brew install antigen
-```
 
-If there is a lot of errors during terminal startup, please see that the script for loading antigen.zsh matches the *caveat* in the output of 
+Antigen is installed through the brewfile.
+
 ```
 brew info antigen
 ```
@@ -147,7 +128,3 @@ jenv enable-plugin export
 ```
 See more info about OpenJDK [here](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 
-
-## Other interesting dotfiles used for inspo
-1. [nicsp](https://github.com/nicksp/dotfiles/blob/master/osx/set-defaults.sh) (See the script in repo for setting up MacOS-spesific things)
-1. And all the others at [Github](https://dotfiles.github.io/)
