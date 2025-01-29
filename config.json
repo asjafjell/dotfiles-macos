@@ -14,6 +14,11 @@
       "label": "Add brew bundle for brewfile support",
       "command": "brew tap homebrew/bundle",
       "sudo": false
+    },
+    {
+      "label": "Install formulas from brewfile",
+      "command": "brew bundle --file $DOTFILES/Brewfile",
+      "sudo": false
     }
   ],
   "symlinks": [
