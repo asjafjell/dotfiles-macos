@@ -1,3 +1,9 @@
+###############################################################################
+# Need some inspo?                                                            #
+###############################################################################
+# See https://macos-defaults.com/ for all commands and examples
+
+
 # Disables hold key for accents
 defaults write -g ApplePressAndHoldEnabled -bool false
 
