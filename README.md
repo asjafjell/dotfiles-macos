@@ -31,9 +31,10 @@ git clone https://github.com/asjafjell/dotfiles-macos.git ~/.dotfiles-macos
 > [!IMPORTANT]  
 > Beware that some of the settings (especially those for [macos](.macos)) may require `sudo` privileges.
 
-2. Run the python installation script
+2. Run the python installation script with temporary reference to dotfiles
 
 ```
+export DOTFILES=~/.dotfiles-macos
 python3 install.py
 ```
 

@@ -1,3 +1,6 @@
+# Point to .dotfiles-macos repo
+export DOTFILES=~/.dotfiles-macos
+
 ############
 # Homebrew #
 ############
