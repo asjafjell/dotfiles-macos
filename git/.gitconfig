@@ -1,0 +1,20 @@
+[user]
+	name = Aleksander Aas Sjåfjell
+	email = github@sjafjell.no
+	username = asjafjell
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB+HaA8JgK/4AvhebXhqOugHaXZDGmBnol9svEr9c5Zq
+
+[push]
+	default = simple
+	followTags = true
+	autoSetupRemote = true
+
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+
+
+

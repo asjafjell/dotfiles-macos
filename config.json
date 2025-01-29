@@ -36,6 +36,11 @@
       "label": "zsh config",
       "src": "$DOTFILES/zsh/.zshrc",
       "dest": "$HOME/.zshrc"
+    },
+    {
+      "label": "git config",
+      "src": "$DOTFILES/git/.gitconfig",
+      "dest": "$HOME/.gitconfig"
     }
   ]
 }
