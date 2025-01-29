@@ -52,7 +52,6 @@ antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle cowboyd/zsh-volta --branch v1
 
 # Load theme
 antigen theme af-magic
