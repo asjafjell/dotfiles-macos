@@ -19,6 +19,7 @@ brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-syntax-highlighting'
 brew 'antigen'
+brew 'jenv'
 
 
 # Apps
@@ -29,3 +30,7 @@ cask 'spotify'
 cask 'slack'
 cask 'notion'
 cask '1password'
+
+cask temurin17
+cask temurin21
+cask temurin

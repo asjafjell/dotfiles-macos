@@ -5,7 +5,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Customization](#customize)
-- [Content](#content)
+- [Terminal setup](#terminal-setup)
 
 ## Requirements
 
@@ -60,12 +60,9 @@ export DOTFILES="$HOME/.dotfiles-macos/"
 2. Activate all bells and whistles and let 1Password do it's magic.
 3. If you are not asked for a login by 1Password when doing e.g. `git pull`, see [the official guide here](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) 
 
-## Install apps
+## Terminal setup
 
-### In Terminal
-
-
-#### Installing Iterm plugins with Antigen
+### Installing Iterm plugins with Antigen
 
 Antigen is installed through the brewfile.
 
@@ -75,32 +72,7 @@ brew info antigen
 
 See more info about Antigen [here](https://github.com/zsh-users/antigen)
 
-#### Iterm as dropdown with shortcut
+### Iterm as dropdown with shortcut
 [This guide from Xun Zhou at dev.io](https://dev.to/vikbert/drop-down-iterm2-in-macos-2od)
 
-#### Intalling Java:
-
-```
-# Install versions often used
-brew tap homebrew/cask-versions
-brew install --cask temurin8
-brew install --cask temurin11
-brew install --cask temurin12
-
-# Install latest
-brew install --cask temurin
-brew install jenv
-
-# Add all versions to jenv
-ls Library/Java/JavaVirtualMachines 
-jenv add /Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
-jenv add /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
-jenv add /Library/Java/JavaVirtualMachines/temurin-12.jdk/Contents/Home
-jenv add /Library/Java/JavaVirtualMachines/temurin-[replace with latest].jdk/Contents/Home
-
-# Enable maven plugin - makes maven respect Jenv.
-jenv enable-plugin maven
-jenv enable-plugin export
-```
-See more info about OpenJDK [here](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 

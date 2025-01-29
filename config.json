@@ -29,7 +29,13 @@
       "label": "Setting iterm2 config",
       "command": "/bin/bash $DOTFILES/iterm2/config",
       "sudo": false
+    },
+    {
+      "label": "Install Java versions and manage with Jenv",
+      "command": "/bin/bash $DOTFILES/.java",
+      "sudo": false
     }
+
   ],
   "symlinks": [
     {
