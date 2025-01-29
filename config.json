@@ -1,0 +1,26 @@
+{
+  "commands": [
+    {
+      "label": "Update brew",
+      "command": "brew update",
+      "sudo": false
+    },
+    {
+      "label": "Upgrade brews",
+      "command": "brew upgrade",
+      "sudo": false
+    },
+    {
+      "label": "Add brew bundle for brewfile support",
+      "command": "brew tap homebrew/bundle",
+      "sudo": false
+    }
+  ],
+  "symlinks": [
+    {
+      "label": "zsh config",
+      "src": "$DOTFILES/zsh/.zshrc",
+      "dest": "$HOME/.zshrc"
+    }
+  ]
+}
