@@ -1,12 +1,59 @@
-# Dotfiles
+# ~/.dotfiles-macos
 
-## Initial keyboard setup for Ergodox EZ
-- Go to System Settings -> Keyboard -> Change keyboard type  
-- ![image](https://github.com/asjafjell/dotfiles/assets/720545/8cbb5cfe-106f-4b0b-a8cc-d4d8789d866f)
-- Go through the guide pressing the keys on the Mac keyboard
-- Set it to ANSI
-- Add input source _ABC, American_
-- Use this input source
+## Overview
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Customization](#customize)
+- [Content](#content)
+
+## Requirements
+
+To be able to install the dotfiles, you are going to need `git` and various developer tools. These are shipped with the macos **command-line-tools.** To install these run:
+
+```
+xcode-select --install
+```
+
+You also need to have [Homebrew](https://brew.sh) installed. Follow instructions on their website to get started.
+
+## Installation
+
+The dotfiles are configured to be installed under `~/.dotfiles-macos/`by default and should be cloned into `$HOME`.
+**See** [location](#Location) to change this.
+
+1. Clone this repository with:
+
+```
+git clone https://github.com/asjafjell/dotfiles-macos.git ~/.dotfiles-macos
+```
+
+> [!IMPORTANT]  
+> Beware that some of the settings (especially those for [macos](.macos)) may require `sudo` privileges.
+
+2. Run the python installation script
+
+```
+python3 install.py
+```
+
+## Customize
+
+Everything can be customized, and it is recommended to get an overlook of what the dotfiles install and adjust them to preferred settings.
+
+### Location
+
+If you want to install the dotfiles somewhere else some paths are dependent on the DOTFILES variable.
+
+in **`.zshrc`**
+
+```
+export DOTFILES="$HOME/.dotfiles-macos/"
+```
+
+> [!NOTE]
+> There also is a reference to `$DOTFILES` in `install.py` which will have to be updated.
+
 
 ## Setup commandos 
 Adds config for `zsh`, `ssh` with this repo
