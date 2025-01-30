@@ -23,6 +23,7 @@ brew 'jenv'
 
 
 # Apps
+cask 'ghostty'
 cask 'iterm2'
 cask 'rectangle'
 cask 'arc'

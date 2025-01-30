@@ -47,6 +47,12 @@
       "label": "git config",
       "src": "$DOTFILES/git/.gitconfig",
       "dest": "$HOME/.gitconfig"
+    },
+    {
+      "label": "ghostty config file",
+      "src": "$DOTFILES/ghostty/config",
+      "dest": "$HOME/.config/ghostty/config"
     }
+
   ]
 }

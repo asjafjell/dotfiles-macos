@@ -46,11 +46,7 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo - robbyrussell's oh-my-zsh
 
-antigen bundle git
-antigen bundle heroku
-antigen bundle pip
 antigen bundle lein
-antigen bundle command-not-found
 antigen bundle zsh-users/zsh-autosuggestions
 
 # Load theme
@@ -78,28 +74,5 @@ alias delete-local-branches="git fetch -p && for branch in $(git branch -vv | gr
 ## Work apps setup             ##
 #################################
 
-# Sqlite
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/sqlite/lib"
-export CPPFLAGS="-I/usr/local/opt/sqlite/include"
-
-# Ruby
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-
-# Getttext
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/gettext/lib"
-export CPPFLAGS="-I/usr/local/opt/gettext/include"
-export PATH="/usr/local/opt/ncurses/bin:$PATH"
-
 # Intellij
 export PATH="/Applications/IntelliJ IDEA.app/Contents/bin:$PATH"
-
-# Volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
-# Openshift
-export PATH="/Users/aas/.dotfiles/openshift:$PATH" # Add plugins path
