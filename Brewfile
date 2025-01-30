@@ -31,6 +31,7 @@ cask 'spotify'
 cask 'slack'
 cask 'notion'
 cask '1password'
+cask 'signal'
 
 cask 'temurin17'
 cask 'temurin21'
