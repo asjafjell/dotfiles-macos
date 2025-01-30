@@ -62,17 +62,10 @@ export DOTFILES="$HOME/.dotfiles-macos/"
 
 ## Terminal setup
 
-### Installing Iterm plugins with Antigen
+### Install Oh My Zsh 
 
-Antigen is installed through the brewfile.
-
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
-brew info antigen
-```
-
-See more info about Antigen [here](https://github.com/zsh-users/antigen)
-
-### Iterm as dropdown with shortcut
-[This guide from Xun Zhou at dev.io](https://dev.to/vikbert/drop-down-iterm2-in-macos-2od)
 
 
