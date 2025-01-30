@@ -1,7 +1,0 @@
-#!/bin/bash
-
-serviceName=$1
-
-pod=$(kubectl get pods --sort-by=.metadata.creationTimestamp -l deploymentConfig=$serviceName -o jsonpath="{.items[0].metadata.name}")
-
-oc logs -f $pod

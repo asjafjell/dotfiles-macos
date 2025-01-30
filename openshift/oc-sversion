@@ -1,2 +1,0 @@
-#!/bin/bash
-oc get svc/$1 -o go-template='{{.metadata.labels.application}} = {{.metadata.labels.artifactid}}-{{.metadata.labels.version}}{{"\n"}}'

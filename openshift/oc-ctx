@@ -1,2 +1,0 @@
-#!/bin/bash
-oc config use-context $1

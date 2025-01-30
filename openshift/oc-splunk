@@ -1,4 +1,0 @@
-#!/bin/bash
-appname=$1
-splunkidx=$(oc get dc/$appname -o go-template='{{index .spec.template.metadata.annotations "splunk.com/index"}}')
-open https://eika.splunkcloud.com/en-US/app/search/search?q=search%20index%3D%22$splunkidx%22%20sourcetype%3D%22kube%3Acontainer%3A$appname%22&display.page.search.mode=smart&dispatch.sample_ratio=1&earliest=-7d%40h&latest=now&sid=1669273258.994914

@@ -1,4 +1,0 @@
-#!/bin/bash
-serviceToLookFor=$(echo $1)
-echo "Routes for app $1."
-oc get routes -l app=$1 -o go-template='{{range .items}}{{.metadata.labels.app}} -> https://{{.spec.host}}{{.spec.path}}{{"\n"}}{{end}}'

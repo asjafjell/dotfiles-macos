@@ -1,5 +1,0 @@
-#!/bin/bash
-service=$(echo $1)
-echo "$1-properties secrets for service $1"
-oc get secret $1-properties -o go-template='{{range $k,$v := .data}}{{"### "}}{{$k}}{{"\n"}}{{$v|base64decode}}{{"\n\n"}}{{end}}'
-

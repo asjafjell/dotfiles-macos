@@ -1,2 +1,0 @@
-#!/bin/bash
-oc get routes -o go-template='{{range .items}}{{.metadata.labels.app}} -> https://{{.spec.host}}{{.spec.path}}{{"\n"}}{{end}}'
