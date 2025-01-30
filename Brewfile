@@ -33,6 +33,6 @@ cask 'notion'
 cask '1password'
 cask 'signal'
 
-cask 'temurin17'
-cask 'temurin21'
+cask 'temurin@17'
+cask 'temurin@21'
 cask 'temurin'
