@@ -8,3 +8,8 @@ font-family="MonoLisa Variable"
 font-size=14
 font-feature=-liga
 font-thicken=true
+
+macos-icon = custom-style
+macos-icon-frame = chrome
+macos-icon-ghost-color = ff007f
+macos-icon-screen-color = 00eaff
