@@ -2,6 +2,9 @@
 ## Shell                       ##
 #################################
 
+# Make sure Homebrew is in path
+export PATH="/opt/homebrew/bin:$PATH"
+
 # Point to .dotfiles-macos repo
 export DOTFILES=~/.dotfiles-macos
 
