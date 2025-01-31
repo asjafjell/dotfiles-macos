@@ -29,6 +29,10 @@ fi
 setopt interactive_comments # weird fix for autocomplete
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
+# Autojump - added from brew install info
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+
 ############
 # Homebrew #
 ############
