@@ -39,6 +39,11 @@
       "label": "Install Oh-My-Zsh",
       "command": "/bin/bash $DOTFILES/.oh-my-zsh",
       "sudo": false
+    },
+    {
+      "label": "Create Ghostty config directory",
+      "command": "/bin/bash $DOTFILES/ghostty/init",
+      "sudo": false
     }
 
   ],
