@@ -44,6 +44,11 @@
       "label": "Create Ghostty config directory",
       "command": "/bin/bash $DOTFILES/ghostty/init",
       "sudo": false
+    },
+    {
+      "label": "Install zsh autosuggestions",
+      "command": "git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc",
+      "sudo": false
     }
 
   ],
