@@ -35,6 +35,8 @@ fi
 # - Gives the terminal a list of command menus and bit more info
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
+# Remap Shift+TAB to zsh-autocomplete menu first item
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 # Native Zsh auto completion setup
 # Docs here: https://zsh.sourceforge.io/Doc/Release/Options.html
@@ -52,13 +54,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Remap TAB to native completion
 bindkey '^I' expand-or-complete
-setopt auto_menu
-
-# Remap Shift+TAB to zsh-autocomplete menu
-# bindkey '^[[Z' zsh-autocomplete-widget
-
-bindkey -M menuselect '^[[Z' reverse-menu-complete
-
 
 # Autojump - added from brew install info
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
@@ -99,3 +94,9 @@ esac
 # pnpm end
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+
+##################################
+## Aliases                     ##
+##################################
+
+alias ..='cd ..'
