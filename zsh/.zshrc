@@ -25,9 +25,35 @@ else
  [[ ! -f $DOTFILES/zsh/.p10k-ghostty.zsh ]] || source $DOTFILES/zsh/.p10k-ghostty.zsh
 fi
 
-# The next block (interactive and source) is to make zsh-autocomplete to work
-setopt interactive_comments # weird fix for autocomplete
+#################################
+## AUTOCOMPLETE SETUP          ##
+#################################
+
+# Zsh Autocomplete
+################################
+# - Is installed via brew (see brewfile)
+# - Gives the terminal a list of command menus and bit more info
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+
+# Native Zsh auto completion setup
+# Docs here: https://zsh.sourceforge.io/Doc/Release/Options.html
+setopt complete_in_word   # insert common prefix on first TAB
+
+
+# Zsh Autosuggestions
+################################
+# - Is installed via git clone (see install script)
+# - Gives the 'greyed out' suggestions when typing
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Native Autocomplete
+################################
+
+# Remap Shift+TAB to native completion (insert common prefix)
+bindkey '^[[Z' expand-or-complete
+
+
 
 # Autojump - added from brew install info
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
@@ -67,6 +93,3 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH="$HOME/.local/bin:$PATH"
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
