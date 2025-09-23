@@ -59,3 +59,14 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 # Intellij
 export PATH="/Applications/IntelliJ IDEA.app/Contents/bin:$PATH"
 
+# pnpm
+export PNPM_HOME="/Users/aas/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="$HOME/.local/bin:$PATH"
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
