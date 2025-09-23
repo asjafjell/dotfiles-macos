@@ -50,9 +50,14 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Native Autocomplete
 ################################
 
-# Remap Shift+TAB to native completion (insert common prefix)
-bindkey '^[[Z' expand-or-complete
+# Remap TAB to native completion
+bindkey '^I' expand-or-complete
+setopt auto_menu
 
+# Remap Shift+TAB to zsh-autocomplete menu
+# bindkey '^[[Z' zsh-autocomplete-widget
+
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 
 
 # Autojump - added from brew install info
@@ -93,3 +98,4 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
