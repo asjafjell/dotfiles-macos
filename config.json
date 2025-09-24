@@ -46,8 +46,8 @@
       "sudo": false
     },
     {
-      "label": "Install zsh autosuggestions",
-      "command": "git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc",
+      "label": "Remove Ghostty default config file if it exists",
+      "command": "rm -f ~/Library/Application\\ Support/com.mitchellh.ghostty/config",
       "sudo": false
     }
 

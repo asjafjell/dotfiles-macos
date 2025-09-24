@@ -47,7 +47,7 @@ setopt complete_in_word   # insert common prefix on first TAB
 ################################
 # - Is installed via git clone (see install script)
 # - Gives the 'greyed out' suggestions when typing
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Native Autocomplete
 ################################
@@ -99,6 +99,9 @@ export PATH="/usr/local/bin:$PATH"
 ## Aliases                     ##
 ##################################
 
-alias ..='cd ..'
+
+##################################
+## Zsh Options                 ##
+##################################
 
 setopt AUTO_CD
