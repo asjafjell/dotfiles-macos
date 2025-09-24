@@ -100,3 +100,5 @@ export PATH="/usr/local/bin:$PATH"
 ##################################
 
 alias ..='cd ..'
+
+setopt AUTO_CD
