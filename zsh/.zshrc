@@ -95,6 +95,9 @@ esac
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
+# Angular - Load Angular CLI autocompletion.
+source <(ng completion script)
+
 ##################################
 ## Aliases                     ##
 ##################################
@@ -105,3 +108,5 @@ export PATH="/usr/local/bin:$PATH"
 ##################################
 
 setopt AUTO_CD
+
+
