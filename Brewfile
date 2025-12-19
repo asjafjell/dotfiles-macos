@@ -26,11 +26,12 @@ brew 'jenv'
 # Apps
 cask 'ghostty'
 cask 'iterm2'
-cask 'arc'
+cask 'vivaldi'
 cask 'slack'
 cask 'notion'
 cask '1password'
 cask 'signal'
+cask 'docker'
 
 cask 'temurin@17'
 cask 'temurin@21'
