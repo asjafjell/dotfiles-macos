@@ -98,6 +98,9 @@ export PATH="/usr/local/bin:$PATH"
 # Angular - Load Angular CLI autocompletion.
 source <(ng completion script)
 
+# Dotnet tools
+export PATH="$PATH:/Users/aas/.dotnet/tools"
+
 ##################################
 ## Aliases                     ##
 ##################################
