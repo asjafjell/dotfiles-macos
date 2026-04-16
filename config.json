@@ -46,6 +46,11 @@
       "sudo": false
     },
     {
+      "label": "Create .github config directory",
+      "command": "/bin/bash $DOTFILES/github/init",
+      "sudo": true
+    },
+    {
       "label": "Remove Ghostty default config file if it exists",
       "command": "rm -f ~/Library/Application\\ Support/com.mitchellh.ghostty/config",
       "sudo": false
@@ -67,6 +72,11 @@
       "label": "ghostty config file",
       "src": "$DOTFILES/ghostty/config",
       "dest": "$HOME/.config/ghostty/config"
+    },
+    {
+      "label": "Copilot config",
+      "src": "$DOTFILES/github/",
+      "dest": "$HOME/.github/"
     }
 
   ]
