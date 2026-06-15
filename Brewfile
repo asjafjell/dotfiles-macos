@@ -21,7 +21,7 @@ brew 'zsh-syntax-highlighting'
 brew 'powerlevel10k'
 brew 'antigen'
 brew 'jenv'
-
+brew 'anomalyco/tap/opencode'
 
 # Apps
 cask 'ghostty'
