@@ -1,6 +1,7 @@
 from json import load
 from os import symlink, remove, path
 from shlex import split as shlex_split
+from shutil import rmtree
 from subprocess import run, CalledProcessError
 
 class color:
@@ -34,14 +35,15 @@ def confirm(prompt):
 def symlink_helper(label, src, dest):
   print(bold(f'{color.BLUE}Creating symbolic link for {label}'))
 
-  # get full paths for files
-  src = path.expandvars(src)
-  dest = path.expandvars(dest)
+  # get full paths for files (strip trailing slashes so symlink() doesn't
+  # try to create the link inside a non-existent directory)
+  src = path.expandvars(src).rstrip('/')
+  dest = path.expandvars(dest).rstrip('/')
 
   if not path.exists(src):
     raise FileNotFoundError(f"Could not find file at {src}")
 
-  if path.exists(dest):
+  if path.lexists(dest):
     filename = path.basename(dest)
     print(f'File {bold(filename)} already exists at {underline(dest)}')
     overwrite = confirm("Do you want to overwrite it?")
@@ -49,7 +51,10 @@ def symlink_helper(label, src, dest):
       print(f"Skipping setting up {label}")
       return
 
-    remove(dest)
+    if path.islink(dest) or not path.isdir(dest):
+      remove(dest)
+    else:
+      rmtree(dest)
 
   symlink(src, dest)
   print(f'Symlinked {underline(src)} to {underline(dest)}\n')
