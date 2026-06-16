@@ -47,7 +47,7 @@ setopt complete_in_word   # insert common prefix on first TAB
 ################################
 # - Is installed via git clone (see install script)
 # - Gives the 'greyed out' suggestions when typing
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Native Autocomplete
 ################################
@@ -73,7 +73,6 @@ setopt interactivecomments
 ## Jenv			       ##
 #################################
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
 export PATH="/usr/local/sbin:$PATH"
 
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi

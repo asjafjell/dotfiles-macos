@@ -1,8 +1,7 @@
 from json import load
-from os import symlink, remove, path, environ
+from os import symlink, remove, path
+from shlex import split as shlex_split
 from subprocess import run, CalledProcessError
-
-DOTFILES_PATH = "$HOME/.dotfiles-macos"
 
 class color:
    PURPLE = '\033[95m'
@@ -60,8 +59,9 @@ def command_helper(label, command, sudo):
     if sudo:
       print("This may require sudo access")
 
-    # Split arguments, and expand potential environment variables
-    expanded = [path.expandvars(cmd) for cmd in command.split(' ')]
+    # Split into arguments (honouring quotes and escaped spaces),
+    # then expand environment variables and a leading ~ in each token.
+    expanded = [path.expanduser(path.expandvars(cmd)) for cmd in shlex_split(command)]
     run(expanded)
 
 if __name__ == '__main__':
