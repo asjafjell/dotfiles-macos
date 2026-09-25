@@ -104,6 +104,9 @@ export PATH="$PATH:/Users/aas/.dotnet/tools"
 ## Aliases                     ##
 ##################################
 
+# opencode without plugins (no omo): stock build agent on Sonnet, small context
+alias ocl='OPENCODE_PURE=1 opencode --model github-copilot/claude-sonnet-5'
+
 
 ##################################
 ## Zsh Options                 ##

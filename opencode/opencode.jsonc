@@ -1,0 +1,7 @@
+{
+  "plugin": ["oh-my-openagent@beta"],
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "paths": ["/Users/aas/code/jbf/agent-skills/.claude/skills"]
+  }
+}

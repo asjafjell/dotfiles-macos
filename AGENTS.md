@@ -34,6 +34,17 @@ The installer runs commands in `config.json` then creates symlinks. It will prom
 | `ghostty/config` | `~/.config/ghostty/config` |
 | `github/` | `~/.github/` (broken) |
 | `ssh/config` | `~/.ssh/config` (not in installer) |
+| `opencode/opencode.jsonc` | `~/.config/opencode/opencode.jsonc` |
+| `opencode/tui.json` | `~/.config/opencode/tui.json` |
+| `opencode/agent/` | `~/.config/opencode/agent/` |
+
+## opencode and oh-my-openagent
+
+opencode comes from the Brewfile. oh-my-openagent (omo) is not installed separately: it is listed under `plugin` in `opencode/opencode.jsonc`, and opencode downloads it on first start. The rest of `~/.config/opencode` (`node_modules`, lockfiles, omo state) is machine-local, so only these individual files are symlinked, not the whole directory.
+
+- `opencode/agent/quick.md`: a cheap Sonnet primary agent (switch with Tab) that denies omo's heavy tools to keep the context small.
+- The `ocl` alias in `.zshrc` runs opencode with `OPENCODE_PURE=1` (no plugins, so no omo) on Sonnet.
+- `skills.paths` in `opencode.jsonc` points to `~/code/jbf/agent-skills`, which must be cloned separately.
 
 ## Git commit signing
 

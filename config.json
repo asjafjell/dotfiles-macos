@@ -49,6 +49,11 @@
       "label": "Remove Ghostty default config file if it exists",
       "command": "rm -f ~/Library/Application\\ Support/com.mitchellh.ghostty/config",
       "sudo": false
+    },
+    {
+      "label": "Create opencode config directory",
+      "command": "mkdir -p ~/.config/opencode",
+      "sudo": false
     }
 
   ],
@@ -72,6 +77,21 @@
       "label": "Copilot config",
       "src": "$DOTFILES/github/",
       "dest": "$HOME/.github/"
+    },
+    {
+      "label": "opencode config (installs oh-my-openagent plugin on first start)",
+      "src": "$DOTFILES/opencode/opencode.jsonc",
+      "dest": "$HOME/.config/opencode/opencode.jsonc"
+    },
+    {
+      "label": "opencode tui config",
+      "src": "$DOTFILES/opencode/tui.json",
+      "dest": "$HOME/.config/opencode/tui.json"
+    },
+    {
+      "label": "opencode agents",
+      "src": "$DOTFILES/opencode/agent/",
+      "dest": "$HOME/.config/opencode/agent/"
     }
 
   ]
