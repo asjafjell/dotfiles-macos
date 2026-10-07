@@ -37,6 +37,9 @@ The installer runs commands in `config.json` then creates symlinks. It will prom
 | `opencode/opencode.jsonc` | `~/.config/opencode/opencode.jsonc` |
 | `opencode/tui.json` | `~/.config/opencode/tui.json` |
 | `opencode/agent/` | `~/.config/opencode/agent/` |
+| `agents/AGENTS.md` | `~/.config/opencode/AGENTS.md` and `~/.claude/CLAUDE.md` (global agent instructions) |
+| `hammerspoon/init.lua` | `~/.hammerspoon/init.lua` |
+| `karabiner/` | `~/.config/karabiner/` (whole directory — see below) |
 
 ## opencode and oh-my-openagent
 
@@ -45,6 +48,25 @@ opencode comes from the Brewfile. oh-my-openagent (omo) is not installed separat
 - `opencode/agent/quick.md`: a cheap Sonnet primary agent (switch with Tab) that denies omo's heavy tools to keep the context small.
 - The `ocl` alias in `.zshrc` runs opencode with `OPENCODE_PURE=1` (no plugins, so no omo) on Sonnet.
 - `skills.paths` in `opencode.jsonc` points to `~/code/jbf/agent-skills`, which must be cloned separately.
+
+## Caps Lock opens the terminal
+
+Caps Lock is a terminal toggle on this machine. Two pieces:
+
+- **Karabiner-Elements** remaps `caps_lock` to `left_control + left_command + t` (`karabiner/karabiner.json`).
+- **Hammerspoon** binds Ctrl+Cmd+T to `toggleApp("ghostty")` (`hammerspoon/init.lua`), which shows Ghostty if hidden and hides it if frontmost.
+
+The same chord is also on a Moonlander key, so both routes land in the same Hammerspoon handler.
+
+**Why Karabiner and not Hammerspoon alone:** macOS debounces the Caps Lock key inside its HID stack whenever the key acts as Caps Lock, and that delay is already paid by the time a `flagsChanged` event reaches Hammerspoon — the toggle feels sluggish. Karabiner remaps below that layer, so there is no delay. A Hammerspoon-only version is also awkward because `hs.eventtap.event:getFlags()` returns only `cmd/alt/shift/ctrl/fn` and drops the Caps Lock state entirely; it has to be read off the `alphaShift` bit (`0x10000`) of `rawFlags()`.
+
+**Manual steps the installer cannot do:**
+
+- Karabiner needs a system extension approved in System Settings -> Privacy & Security, plus Input Monitoring permission. Both are GUI prompts on first launch.
+- Hammerspoon needs Accessibility permission.
+- `brew install --cask karabiner-elements` runs a `.pkg` under `sudo`, so it needs a real terminal.
+
+**Why the whole `karabiner/` directory is symlinked, not just the file:** Karabiner rewrites `karabiner.json` with an atomic replace when settings change in its UI, which would clobber a file symlink and silently detach the config from this repo. Linking the directory survives that. The cost is that Karabiner also drops machine-local state in there — `automatic_backups/` is gitignored.
 
 ## Git commit signing
 

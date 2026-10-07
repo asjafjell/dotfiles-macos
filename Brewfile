@@ -34,6 +34,10 @@ cask 'signal'
 cask 'docker-desktop'
 cask 'claude-code'
 
+# Keyboard: Karabiner remaps Caps Lock to Ctrl+Cmd+T, Hammerspoon acts on it
+cask 'hammerspoon'
+cask 'karabiner-elements'
+
 cask 'temurin@17'
 cask 'temurin@21'
 cask 'temurin'

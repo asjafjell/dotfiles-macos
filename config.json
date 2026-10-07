@@ -54,8 +54,17 @@
       "label": "Create opencode config directory",
       "command": "mkdir -p ~/.config/opencode",
       "sudo": false
+    },
+    {
+      "label": "Create Hammerspoon config directory",
+      "command": "mkdir -p ~/.hammerspoon",
+      "sudo": false
+    },
+    {
+      "label": "Create Karabiner config directory",
+      "command": "mkdir -p ~/.config",
+      "sudo": false
     }
-
   ],
   "symlinks": [
     {
@@ -92,7 +101,26 @@
       "label": "opencode agents",
       "src": "$DOTFILES/opencode/agent/",
       "dest": "$HOME/.config/opencode/agent/"
+    },
+    {
+      "label": "opencode global agent instructions",
+      "src": "$DOTFILES/agents/AGENTS.md",
+      "dest": "$HOME/.config/opencode/AGENTS.md"
+    },
+    {
+      "label": "Claude Code global agent instructions",
+      "src": "$DOTFILES/agents/AGENTS.md",
+      "dest": "$HOME/.claude/CLAUDE.md"
+    },
+    {
+      "label": "Hammerspoon config (Ctrl+Cmd+T toggles Ghostty)",
+      "src": "$DOTFILES/hammerspoon/init.lua",
+      "dest": "$HOME/.hammerspoon/init.lua"
+    },
+    {
+      "label": "Karabiner config (Caps Lock sends Ctrl+Cmd+T)",
+      "src": "$DOTFILES/karabiner/",
+      "dest": "$HOME/.config/karabiner/"
     }
-
   ]
 }
