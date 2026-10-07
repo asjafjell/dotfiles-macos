@@ -114,4 +114,6 @@ alias ocl='OPENCODE_PURE=1 opencode --model github-copilot/claude-sonnet-5'
 
 setopt AUTO_CD
 
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
