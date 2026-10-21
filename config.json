@@ -6,16 +6,6 @@
       "sudo": false
     },
     {
-      "label": "Upgrade brews",
-      "command": "brew upgrade",
-      "sudo": false
-    },
-    {
-      "label": "Add brew bundle for brewfile support",
-      "command": "brew tap homebrew/bundle",
-      "sudo": false
-    },
-    {
       "label": "Install formulas from brewfile",
       "command": "brew bundle --file $DOTFILES/Brewfile",
       "sudo": false
@@ -23,21 +13,11 @@
     {
       "label": "Setting macOs settings",
       "command": "/bin/bash $DOTFILES/.macos",
-      "sudo": true
-    },
-    {
-      "label": "Setting iterm2 config",
-      "command": "/bin/bash $DOTFILES/iterm2/config",
       "sudo": false
     },
     {
       "label": "Install Java versions and manage with Jenv",
       "command": "/bin/bash $DOTFILES/.javaconfig",
-      "sudo": false
-    },
-    {
-      "label": "Install Oh-My-Zsh",
-      "command": "/bin/bash $DOTFILES/.oh-my-zsh",
       "sudo": false
     },
     {
@@ -81,11 +61,6 @@
       "label": "ghostty config file",
       "src": "$DOTFILES/ghostty/config",
       "dest": "$HOME/.config/ghostty/config"
-    },
-    {
-      "label": "Copilot config",
-      "src": "$DOTFILES/github/",
-      "dest": "$HOME/.github/"
     },
     {
       "label": "opencode config (installs oh-my-openagent plugin on first start)",

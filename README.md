@@ -5,7 +5,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Customization](#customize)
-- [Terminal setup](#terminal-setup)
+- [Keeping Homebrew in sync](#keeping-homebrew-in-sync)
 
 ## Requirements
 
@@ -60,12 +60,11 @@ export DOTFILES="$HOME/.dotfiles-macos/"
 2. Activate all bells and whistles and let 1Password do it's magic.
 3. If you are not asked for a login by 1Password when doing e.g. `git pull`, see [the official guide here](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) 
 
-## Terminal setup
+## Keeping Homebrew in sync
 
-### Install Oh My Zsh 
+The installer installs what is missing from the [Brewfile](Brewfile), but it does not upgrade packages. Run `brew upgrade` yourself when you want that.
 
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+brew bundle check --file $DOTFILES/Brewfile     # anything in the Brewfile that is not installed?
+brew bundle cleanup --file $DOTFILES/Brewfile   # anything installed that is not in the Brewfile? (--force removes it)
 ```
-
-
