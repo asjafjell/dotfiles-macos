@@ -76,6 +76,15 @@ The same chord is also on a Moonlander key, so both routes land in the same Hamm
 
 Two separate p10k configs exist — `zsh/.p10k-ghostty.zsh` and `zsh/.p10k-intellij.zsh`. `.zshrc` selects between them at shell start based on `$TERMINAL_EMULATOR`. Editing one does not affect the other.
 
+## Zsh startup speed
+
+`zsh/.zshrc` is tuned so a new shell starts in about 0.2s. Avoid adding anything that runs an external program on every start. Use `_zshrc_cached_source` for init scripts that come from a command's output (`eval "$(tool init)"`, `source <(tool completion)`).
+
+- **Cache files**: `${XDG_CACHE_HOME:-~/.cache}/zshrc/` holds the cached output of `ng completion script` and `jenv init -`. A cache file is rebuilt on its own when the tool's binary moves or gets newer (an upgrade). If one goes stale anyway, delete it: `rm -rf ~/.cache/zshrc`.
+- **nvm** is loaded with `--no-use`, and the default version's `bin` is put on PATH directly. Only a plain version in `~/.nvm/alias/default` (such as `22`) takes the fast path. Aliases like `lts/*` fall back to `nvm_auto use`, which costs about 1s.
+- **Do not call `compinit`**: zsh-autocomplete runs it itself. nvm's bash_completion would run a second, full one (~0.35s), so `.zshrc` stops that by marking compinit as autoloaded before sourcing it.
+- **Measure**: `for i in 1 2 3 4 5; do /usr/bin/time zsh -i -c exit; done`. For per-function costs, add `zmodload zsh/zprof` at the top and `zprof` at the bottom (do not commit them).
+
 ## Hardcoded paths
 
 `zsh/.zshrc` contains hardcoded `/Users/aas/` paths (`PNPM_HOME`, `.dotnet/tools`). These will not work for any other username without editing.
