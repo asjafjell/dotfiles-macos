@@ -1,7 +1,3 @@
-# We keep this here as well as in the installation script
-# So that we can later use this file for 'brew bundle cleanup'
-tap 'homebrew/bundle'
-
 # specify a directory to install
 #$cask_args appdir: '/Applications'
 
@@ -25,7 +21,6 @@ brew 'anomalyco/tap/opencode'
 
 # Apps
 cask 'ghostty'
-cask 'iterm2'
 cask 'vivaldi'
 cask 'slack'
 cask 'notion'

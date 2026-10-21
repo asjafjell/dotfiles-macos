@@ -17,13 +17,14 @@ export DOTFILES=~/.dotfiles-macos   # required — install.py uses $DOTFILES via
 python3 install.py                  # interactive; asks before overwriting existing symlink targets
 ```
 
-The installer runs commands in `config.json` then creates symlinks. It will prompt to overwrite each conflicting destination.
+The installer runs commands in `config.json` then creates symlinks. It will prompt to overwrite each conflicting destination. A failing command or symlink is reported and skipped; the remaining steps still run, and the installer lists all failures at the end and exits non-zero. Commands with `"sudo": true` are prefixed with `sudo`.
+
+`install.py` opens `config.json` relative to the current directory, so run it from the repo root.
 
 ## Known gaps in the installer
 
 - **`ssh/config` is NOT symlinked**: `ssh/config` exists in the repo but has no entry in `config.json`. Must be linked manually: `ln -s ~/.dotfiles-macos/ssh/config ~/.ssh/config`
-- **`.oh-my-zsh` step will fail**: `config.json` references `$DOTFILES/.oh-my-zsh` which does not exist. Oh My Zsh must be installed manually before or after the installer runs.
-- **`$HOME/.github/` symlink is acknowledged broken**: See commit history.
+- **`.bash_profile` is NOT symlinked** either.
 
 ## Key config files and their symlink destinations
 
@@ -32,7 +33,6 @@ The installer runs commands in `config.json` then creates symlinks. It will prom
 | `zsh/.zshrc` | `~/.zshrc` |
 | `git/.gitconfig` | `~/.gitconfig` |
 | `ghostty/config` | `~/.config/ghostty/config` |
-| `github/` | `~/.github/` (broken) |
 | `ssh/config` | `~/.ssh/config` (not in installer) |
 | `opencode/opencode.jsonc` | `~/.config/opencode/opencode.jsonc` |
 | `opencode/tui.json` | `~/.config/opencode/tui.json` |
@@ -82,9 +82,7 @@ Two separate p10k configs exist — `zsh/.p10k-ghostty.zsh` and `zsh/.p10k-intel
 
 ## Brewfile notes
 
+- `homebrew/bundle` is not tapped: `brew bundle` is built into Homebrew now, and the tap is deprecated.
+- `brew bundle check --file Brewfile` lists Brewfile entries that are not installed; `brew bundle cleanup --file Brewfile` lists installed packages missing from the Brewfile (add `--force` to uninstall them).
 - `opencode` is installed via a custom tap: `anomalyco/tap/opencode` — not in the standard Homebrew index.
 - Java casks (`temurin@17`, `temurin@21`) must be installed before `.javaconfig` runs successfully (it references `/Library/Java/JavaVirtualMachines/temurin-17.jdk` etc.).
-
-## Committed `.venv/`
-
-A Python 3.9 venv at `.venv/` is committed to the repo. It is linked to the macOS CLT Python at `/Library/Developer/CommandLineTools/...`. Do not delete or replace it without understanding the dependency.

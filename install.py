@@ -61,13 +61,16 @@ def symlink_helper(label, src, dest):
 
 def command_helper(label, command, sudo):
     print(bold(f"Executing command: {color.BLUE}{label}"))
-    if sudo:
-      print("This may require sudo access")
 
     # Split into arguments (honouring quotes and escaped spaces),
     # then expand environment variables and a leading ~ in each token.
     expanded = [path.expanduser(path.expandvars(cmd)) for cmd in shlex_split(command)]
-    run(expanded)
+    if sudo:
+      expanded = ['sudo'] + expanded
+
+    result = run(expanded)
+    if result.returncode != 0:
+      raise RuntimeError(f"Command exited with status {result.returncode}")
 
 if __name__ == '__main__':
   # check if brew installed
@@ -82,13 +85,30 @@ if __name__ == '__main__':
   with open('config.json', 'r') as configFile:
     config = load(configFile)
 
+  # Keep going when a step fails, and list the failures at the end
+  failures = []
+
   for command in config['commands']:
-    command_helper(**command)
+    try:
+      command_helper(**command)
+    except Exception as error:
+      print(f"{color.RED}Failed: {error}{color.END}")
+      failures.append(command['label'])
     print("")
 
   # Create symbolic links
   for link in config['symlinks']:
-    symlink_helper(**link)
+    try:
+      symlink_helper(**link)
+    except Exception as error:
+      print(f"{color.RED}Failed: {error}{color.END}")
+      failures.append(link['label'])
     print("")
+
+  if failures:
+    print(f"{color.RED + color.BOLD}dotfiles setup finished with {len(failures)} failed step(s):{color.END}")
+    for label in failures:
+      print(f"  - {label}")
+    exit(1)
 
   print(f"{color.GREEN + color.BOLD}dotfiles setup complete!", color.END)
