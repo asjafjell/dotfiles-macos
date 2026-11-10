@@ -6,6 +6,7 @@
 - [Installation](#installation)
 - [Customization](#customize)
 - [Terminal setup](#terminal-setup)
+- [⚡ Shell tricks](#-shell-tricks)
 
 ## Requirements
 
@@ -68,4 +69,42 @@ export DOTFILES="$HOME/.dotfiles-macos/"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+## ⚡ Shell tricks
 
+The stuff that is easy to forget. Run `tips` in a terminal to print this section, and the shell shows a one-line reminder in the first terminal you open each day.
+
+### Finding things
+
+| Keys / command | What it does |
+|---|---|
+| `Ctrl+R` | Search your whole shell history ([atuin](https://atuin.sh)). The numbers on the left are how long the command took and how long ago you ran it. `Alt+1`–`9` runs that row directly. |
+| `Ctrl+T` | Fuzzy-find a file under the current folder and paste its path where the cursor is. `Tab` marks several. |
+| `Alt+C` | Fuzzy-find a folder and `cd` into it. |
+| `Tab` | Completion menu you can type in to filter ([fzf-tab](https://github.com/Aloxaf/fzf-tab)). On `cd` it previews the folder. |
+| `z <part of path>` | Jump to the folder you use most that matches, e.g. `z dotf` ([zoxide](https://github.com/ajeetdsouza/zoxide)). |
+| `zi` | Same, but pick from a list. |
+
+### Looking at things
+
+| Command | What it does |
+|---|---|
+| `ls` | [eza](https://eza.rocks), folders first. |
+| `ll` | Long list including hidden files and git status per file. |
+| `tree` | Folder tree. |
+| `cat <file>` | [bat](https://github.com/sharkdp/bat), with syntax highlighting. Acts like plain `cat` when piped. |
+
+### Terminal
+
+| Keys | What it does |
+|---|---|
+| `Caps Lock` | Show or hide Ghostty from anywhere (Karabiner + Hammerspoon). |
+| `Cmd+↑` / `Cmd+↓` | Jump to the previous / next prompt in Ghostty. |
+| `Cmd+Shift+↑` / `Cmd+Shift+↓` | Same, with the shift variant of the binding. |
+| Type a folder name | `cd` into it without typing `cd` (`AUTO_CD`). |
+
+### Good to know
+
+- Typing gives greyed-out suggestions from history. `→` accepts them.
+- Green or red command text while typing tells you whether the command exists. Underlined text is a path that exists.
+- `nvm` loads the first time you run it, to keep startup fast. Node is on `PATH` from the start.
+- `JAVA_HOME` follows jenv when you change folder or run `jenv shell/local/global`.
