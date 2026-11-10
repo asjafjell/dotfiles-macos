@@ -70,7 +70,7 @@ The same chord is also on a Moonlander key, so both routes land in the same Hamm
 
 ## Git commit signing
 
-`git/.gitconfig` has `commit.gpgsign = true` using 1Password's SSH agent. All commits from this machine are signed. Requires 1Password and its SSH agent to be running and unlocked.
+`git/.gitconfig` has `commit.gpgsign = true` with `gpg.format = ssh`. Git signs through the SSH agent in `SSH_AUTH_SOCK`, which `.zshrc` points at Proton Pass (`~/.ssh/proton-pass-ssh-agent.sock`). All commits from this machine are signed. Requires Proton Pass to be running, unlocked and with its SSH agent turned on.
 
 ## Zsh / Powerlevel10k quirk
 

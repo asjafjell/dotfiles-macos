@@ -61,6 +61,11 @@
       "sudo": false
     },
     {
+      "label": "Create SSH config directory",
+      "command": "mkdir -p -m 700 ~/.ssh",
+      "sudo": false
+    },
+    {
       "label": "Create Karabiner config directory",
       "command": "mkdir -p ~/.config",
       "sudo": false
@@ -76,6 +81,11 @@
       "label": "git config",
       "src": "$DOTFILES/git/.gitconfig",
       "dest": "$HOME/.gitconfig"
+    },
+    {
+      "label": "ssh config (uses the Proton Pass SSH agent)",
+      "src": "$DOTFILES/ssh/config",
+      "dest": "$HOME/.ssh/config"
     },
     {
       "label": "ghostty config file",

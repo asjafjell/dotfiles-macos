@@ -121,4 +121,4 @@ export NVM_DIR="$HOME/.nvm"
 ##################################
 ## SSH-key                      ##
 ##################################
-export SSH_AUTH_SOCK=/Users/aas/.ssh/proton-pass-ssh-agent.sock
+export SSH_AUTH_SOCK="$HOME/.ssh/proton-pass-ssh-agent.sock"

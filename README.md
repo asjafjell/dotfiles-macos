@@ -56,9 +56,9 @@ export DOTFILES="$HOME/.dotfiles-macos/"
 > There also is a reference to `$DOTFILES` in `install.py` which will have to be updated.
 
 ## Set up .ssh key
-1. Enable SSH in 1Password
-2. Activate all bells and whistles and let 1Password do it's magic.
-3. If you are not asked for a login by 1Password when doing e.g. `git pull`, see [the official guide here](https://developer.1password.com/docs/ssh/get-started/#step-3-turn-on-the-1password-ssh-agent) 
+1. Open Proton Pass (installed from the Brewfile) and log in.
+2. In Proton Pass settings, turn on the SSH agent. It listens on `~/.ssh/proton-pass-ssh-agent.sock`, which `ssh/config` and `.zshrc` point to.
+3. Make sure the SSH key matching `signingkey` in `git/.gitconfig` is stored in Proton Pass. Check with `ssh-add -l` in a new shell, then `ssh -T git@github.com`.
 
 ## Terminal setup
 
