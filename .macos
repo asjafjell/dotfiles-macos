@@ -38,9 +38,8 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Finder
 ###############################################################################
 
-# Show hidden files and file extensions by default
+# Show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Disable the warning when changing file extensions
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
