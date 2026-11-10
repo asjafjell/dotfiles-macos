@@ -58,3 +58,6 @@ fabric.properties
 # Karabiner writes machine-local state into its config directory
 karabiner/automatic_backups/
 karabiner/assets/
+
+# Python bytecode from running install.py
+__pycache__/
