@@ -117,3 +117,8 @@ setopt AUTO_CD
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+##################################
+## SSH-key                      ##
+##################################
+export SSH_AUTH_SOCK=/Users/aas/.ssh/proton-pass-ssh-agent.sock
